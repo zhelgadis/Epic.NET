@@ -1,0 +1,66 @@
+body {
+	font-family: "Verdana", "sans-serif";
+}
+.header {
+	height : 150px;
+	background:url('logo.png') no-repeat 75% 15px;
+}
+.header div.title {
+	margin-bottom : 0px;
+	border-bottom : 1px solid black;
+	padding-left : -100%;
+	font-size : 1px;
+	height : 114px;
+	color:white;
+}
+.header span {
+	margin-left : 15%;
+	font-family:serif;
+	letter-spacing:10px
+}
+div.content {
+	display : block;
+	margin-top: 30px;
+	width:65%;
+	margin-left: 10%;
+}
+div.copyright {
+	display : block;
+	margin: 40px 30% 20px 30%;
+	border-top: 1px solid gray;
+	padding:20px;
+	text-align:center;
+	font-family:serif;
+	font-size:small;
+}
+ul.menu {
+	letter-spacing:3px;
+	display : absolute;
+	position:fixed;
+	top:30%;
+	right:3%;
+	z-index:0;
+	width : 20%;
+	list-style: none;
+}
+ul.menu li {
+	display: inline;
+	margin: 0;
+	padding: 0;
+}
+ul.menu a {
+	display : block;
+	border-left: 1px solid white;
+	border-bottom: 1px solid white;
+	text-decoration: none;
+	padding:5px;
+	padding-left:20px;
+}
+ul.menu a:hover {
+	display : block;
+	border-left: 1px solid gray;
+	border-bottom: 1px solid gray;
+	text-decoration: none;
+	padding:5px;
+	padding-left:20px;
+}
