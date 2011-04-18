@@ -55,6 +55,8 @@ ul.menu a:hover {
 	padding:5px;
 	padding-left:20px;
 }
+dl.roadmap { display: block; padding-bottom: 20px }
+dl.roadmap dt { font-weight:bold }
 div.copyright {
 	display : block;
 	border-top: 1px solid gray;
