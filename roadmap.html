@@ -10,13 +10,16 @@
   <!--[if !IE 7]>
 	<style type="text/css">
 		#wrap {display:table;height:100%}
-		ul.menu {position:absolute}	
 	</style>
   <![endif]-->
   <!--[if lt IE 8]>
 	<style type="text/css">
-		#content {width:75%}
 		#header {padding-top: 9px}
+	</style>
+  <![endif]-->
+  <!--[if IE 8]>
+	<style type="text/css">
+		#wrap {width:100%}
 	</style>
   <![endif]-->
 </head>
@@ -29,13 +32,23 @@
     </div>
     <div id="main">
       <div id="content">
+        <ul class="menu">
+          <li><a href="index.html">Overview</a></li>
+          <li><a href="roadmap.html">Roadmap</a></li>
+          <li><a href="http://github.com/Shamar/Epic.NET/archives/master">Download</a></li>
+          <li><a href="license.html">License</a></li>
+          <li><a href="https://sourceforge.net/apps/mediawiki/epic-net/index.php?title=Blueprints">Documentation</a></li>
+          <li><a href="http://github.com/Shamar/Epic.NET/issues">Issues</a></li>
+          <li><a href="#">Support</a></li>
+        </ul>
 
         <h1>Roadmap</h1>
-        
         <p>Epic is a challenging project that will require a huge effort to complete (roughly 3 person years).</p>
-        <p>This page keep track of the progress done.</p>
+        <p>To ease the development, each step in this roadmap will release an high-quality piece of Epic, 
+        well documented and fully covered from unit tests.</p>
         
-        <dl class="roadmap">
+        <p>This page keep track of the progress done.
+        <dl class="roadmap" style="clear:both;">
           <dt>0.1</dt>
           <dd>Initial release with the <a href="http://dddsample.sourceforge.net/">DDD Sample</a> domain model rewritten as a <a href="https://github.com/Shamar/Epic.NET/tree/master/Challenges/Challenge00.DDDSample">pure idiomatic POCO</a>.</dd>
           <dt>0.2</dt>
@@ -59,19 +72,10 @@
           <dd>Reference application: the pure POCO DDD Sample solve the ACME (Another Cargo Movement Enterprise) requirements.</dd>
 	</dl>
 	<i>Hic sunt leones.</i>
-      </div>
+        </p>
+       
+     </div>
 
-      <div id="side">
-       <ul class="menu">
-        <li><a href="index.html">Overview</a></li>
-        <li><a href="roadmap.html">Roadmap</a></li>
-        <li><a href="http://github.com/Shamar/Epic.NET/archives/master">Download</a></li>
-        <li><a href="license.html">License</a></li>
-        <li><a href="https://sourceforge.net/apps/mediawiki/epic-net/index.php?title=Blueprints">Documentation</a></li>
-        <li><a href="http://github.com/Shamar/Epic.NET/issues">Issues</a></li>
-        <li><a href="#">Support</a></li>
-       </ul>
-      </div>
     </div>
   </div>
 

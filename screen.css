@@ -21,16 +21,17 @@ body {
 #content {
 	display : block;
 	padding-top: 30px;
-	width:65%;
+	/*width:65%;*/
 	padding-left: 10%;
 	padding-bottom: 30px;
 }
 ul.menu {
 	letter-spacing:3px;
-	display : absolute;
+	float:right;
+	/*display : absolute;
 	position:fixed;
 	top:30%;
-	right:3%;
+	right:3%;*/
 	z-index:0;
 	width : 20%;
 	list-style: none;
