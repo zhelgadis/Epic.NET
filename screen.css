@@ -58,6 +58,8 @@ ul.menu a:hover {
 }
 dl.roadmap { display: block; padding-bottom: 20px }
 dl.roadmap dt { font-weight:bold }
+dl.roadmap dt.done { color:#238E23; }
+dl.roadmap dt.done span.date { font-weight:normal;color:#545454;padding-left:17px;padding-right:30px }
 div.copyright {
 	display : block;
 	border-top: 1px solid gray;
@@ -66,3 +68,9 @@ div.copyright {
 	font-family:serif;
 	font-size:small;
 }
+
+.minibutton{position:relative;font-family:helvetica,arial,freesans,clean,sans-serif;display:inline-block;height:21px;padding:0 0 0 3px;font-size:11px;font-weight:bold;color:#333;text-shadow:1px 1px 0 #fff;white-space:nowrap;border:none;overflow:visible;cursor:pointer;border:1px solid #d4d4d4;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;background:#f4f4f4;filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#f4f4f4',endColorstr='#ececec');background:-webkit-gradient(linear,left top,left bottom,from(#f4f4f4),to(#ececec));background:-moz-linear-gradient(top,#f4f4f4,#ececec);}
+.minibutton>span{display:block;height:21px;padding:0 9px 0 7px;line-height:21px;}
+.minibutton:hover{color:#fff;text-decoration:none;text-shadow:-1px -1px 0 rgba(0,0,0,0.3);border-color:#518cc6;border-bottom-color:#2a65a0;background:#599bdc;filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#599bdc',endColorstr='#3072b3');background:-webkit-gradient(linear,left top,left bottom,from(#599bdc),to(#3072b3));background:-moz-linear-gradient(top,#599bdc,#3072b3);}
+.minibutton.mousedown{border-color:#2a65a0;border-bottom-color:#518cc6;background:#3072b3;filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#3072b3',endColorstr='#599bdc');background:-webkit-gradient(linear,left top,left bottom,from(#3072b3),to(#599bdc));background:-moz-linear-gradient(top,#3072b3,#599bdc);}
+
