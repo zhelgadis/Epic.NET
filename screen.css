@@ -59,7 +59,7 @@ ul.menu a:hover {
 dl.roadmap { display: block; padding-bottom: 20px }
 dl.roadmap dt { font-weight:bold }
 dl.roadmap dt.done { color:#238E23; }
-dl.roadmap dt.done span.date { font-weight:normal;color:#545454;padding-left:17px;padding-right:30px }
+dl.roadmap dt.done span.date { font-weight:normal;color:#545454;padding-right:50px }
 dl.roadmap dt.done a.minibutton{text-decoration:none}
 div.copyright {
 	display : block;
