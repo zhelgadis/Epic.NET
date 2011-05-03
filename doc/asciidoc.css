@@ -18,10 +18,6 @@ tt {
   font-size: inherit;
 }
 
-body {
-  margin: 1em 5% 1em 5%;
-}
-
 a {
   color: blue;
   text-decoration: underline;
@@ -47,8 +43,8 @@ tt {
 
 h1, h2, h3, h4, h5, h6 {
   color: #527bbd;
-  margin-top: 1.2em;
-  margin-bottom: 0.5em;
+  padding-top: 1.2em;
+  padding-bottom: 0.5em;
   line-height: 1.3;
 }
 
@@ -56,7 +52,7 @@ h1, h2, h3 {
   border-bottom: 2px solid silver;
 }
 h2 {
-  padding-top: 0.5em;
+  padding-top: 1.7em;
 }
 h3 {
   float: left;
@@ -74,12 +70,12 @@ hr {
 }
 
 p {
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
 }
 
 ul, ol, li > p {
-  margin-top: 0;
+  padding-top: 0;
 }
 ul > li     { color: #aaa; }
 ul > li > * { color: black; }
@@ -99,35 +95,20 @@ span#email {
 span#revnumber, span#revdate, span#revremark {
 }
 
-div#footer {
-  font-size: small;
-  border-top: 2px solid silver;
-  padding-top: 0.5em;
-  margin-top: 4.0em;
-}
-div#footer-text {
-  float: left;
-  padding-bottom: 0.5em;
-}
-div#footer-badges {
-  float: right;
-  padding-bottom: 0.5em;
-}
-
 div#preamble {
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
 }
 div.tableblock, div.imageblock, div.exampleblock, div.verseblock,
 div.quoteblock, div.literalblock, div.listingblock, div.sidebarblock,
 div.admonitionblock {
-  margin-top: 1.0em;
-  margin-bottom: 1.5em;
+  padding-top: 1.0em;
+  padding-bottom: 1.5em;
 }
 div.admonitionblock {
-  margin-top: 2.0em;
-  margin-bottom: 2.0em;
-  margin-right: 10%;
+  padding-top: 2.0em;
+  padding-bottom: 2.0em;
+  padding-right: 10%;
   color: #606060;
 }
 
@@ -140,21 +121,21 @@ div.title, caption.title {
   color: #527bbd;
   font-weight: bold;
   text-align: left;
-  margin-top: 1.0em;
-  margin-bottom: 0.5em;
+  padding-top: 1.0em;
+  padding-bottom: 0.5em;
 }
 div.title + * {
   margin-top: 0;
 }
 
 td div.title:first-child {
-  margin-top: 0.0em;
+  padding-top: 0.0em;
 }
 div.content div.title:first-child {
-  margin-top: 0.0em;
+  padding-top: 0.0em;
 }
 div.content + div.title {
-  margin-top: 0.0em;
+  padding-top: 0.0em;
 }
 
 div.sidebarblock > div.content {
@@ -173,8 +154,8 @@ div.listingblock > div.content {
 
 div.quoteblock, div.verseblock {
   padding-left: 1.0em;
-  margin-left: 1.0em;
-  margin-right: 10%;
+/*  margin-left: 1.0em; */
+  padding-right: 10%;
   border-left: 5px solid #f0f0f0;
   color: #777777;
 }
@@ -220,17 +201,17 @@ span.image img { border-style: none; }
 a.image:visited { color: white; }
 
 dl {
-  margin-top: 0.8em;
-  margin-bottom: 0.8em;
+  padding-top: 0.8em;
+  padding-bottom: 0.8em;
 }
 dt {
-  margin-top: 0.5em;
-  margin-bottom: 0;
+  padding-top: 0.5em;
+  padding-bottom: 0;
   font-style: normal;
   color: navy;
 }
 dd > *:first-child {
-  margin-top: 0.1em;
+  padding-top: 0.1em;
 }
 
 ul, ol {
@@ -255,8 +236,8 @@ ol.upperroman {
 div.compact ul, div.compact ol,
 div.compact p, div.compact p,
 div.compact div, div.compact div {
-  margin-top: 0.1em;
-  margin-bottom: 0.1em;
+  padding-top: 0.1em;
+  padding-bottom: 0.1em;
 }
 
 div.tableblock > table {
@@ -273,7 +254,7 @@ td > div.verse {
   white-space: pre;
 }
 p.table {
-  margin-top: 0;
+  padding-top: 0;
 }
 /* Because the table frame attribute is overriden by CSS in most browsers. */
 div.tableblock > table[frame="void"] {
@@ -290,8 +271,8 @@ div.tableblock > table[frame="vsides"] {
 
 
 div.hdlist {
-  margin-top: 0.8em;
-  margin-bottom: 0.8em;
+  padding-top: 0.8em;
+  padding-bottom: 0.8em;
 }
 div.hdlist tr {
   padding-bottom: 15px;
@@ -326,12 +307,12 @@ span.footnote, span.footnoteref {
 }
 
 #footnotes {
-  margin: 20px 0 20px 0;
-  padding: 7px 0 0 0;
+  /* margin: 20px 0 20px 0; */
+  padding: 27px 0 20px 0;
 }
 
 #footnotes div.footnote {
-  margin: 0 0 5px 0;
+  padding: 0 0 5px 0;
 }
 
 #footnotes hr {
@@ -339,7 +320,7 @@ span.footnote, span.footnoteref {
   border-top: 1px solid silver;
   height: 1px;
   text-align: left;
-  margin-left: 0;
+  padding-left: 0;
   width: 20%;
   min-width: 100px;
 }
@@ -350,7 +331,7 @@ div.colist td {
   vertical-align: top;
 }
 div.colist td img {
-  margin-top: 0.3em;
+  padding-top: 0.3em;
 }
 
 @media print {
@@ -358,31 +339,31 @@ div.colist td img {
 }
 
 div#toc {
-  margin-bottom: 2.5em;
+  padding-bottom: 2.5em;
 }
 
 div#toctitle {
   color: #527bbd;
   font-size: 1.1em;
   font-weight: bold;
-  margin-top: 1.0em;
-  margin-bottom: 0.1em;
+  padding-top: 1.0em;
+  padding-bottom: 0.1em;
 }
 
 div.toclevel1, div.toclevel2, div.toclevel3, div.toclevel4 {
-  margin-top: 0;
-  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 div.toclevel2 {
-  margin-left: 2em;
+  padding-left: 2em;
   font-size: 0.9em;
 }
 div.toclevel3 {
-  margin-left: 4em;
+  padding-left: 4em;
   font-size: 0.9em;
 }
 div.toclevel4 {
-  margin-left: 6em;
+  padding-left: 6em;
   font-size: 0.9em;
 }
 

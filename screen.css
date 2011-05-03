@@ -28,6 +28,8 @@ body {
 ul.menu {
 	letter-spacing:3px;
 	float:right;
+	padding-bottom: 30px;
+	background-color: #ffffff;
 	/*display : absolute;
 	position:fixed;
 	top:30%;
@@ -41,6 +43,7 @@ ul.menu li {
 	padding: 0;
 }
 ul.menu a {
+        color:blue;
 	display : block;
 	border-left: 1px solid white;
 	border-bottom: 1px solid white;
