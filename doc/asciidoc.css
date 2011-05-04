@@ -1,6 +1,6 @@
 /* Sans-serif font. */
 h1, h2, h3, h4, h5, h6,
-div.title, caption.title,
+div.ad-title, caption.ad-title,
 thead, p.table.header,
 div#toctitle,
 span#author, span#revnumber, span#revdate, span#revremark,
@@ -53,6 +53,7 @@ h1, h2, h3 {
 }
 h2 {
   padding-top: 1.7em;
+  clear:both;
 }
 h3 {
   float: left;
@@ -117,24 +118,24 @@ div.content { /* Block element content. */
 }
 
 /* Block element titles. */
-div.title, caption.title {
+div.ad-title, caption.ad-title {
   color: #527bbd;
   font-weight: bold;
   text-align: left;
   padding-top: 1.0em;
   padding-bottom: 0.5em;
 }
-div.title + * {
+div.ad-title + * {
   margin-top: 0;
 }
 
-td div.title:first-child {
+td div.ad-title:first-child {
   padding-top: 0.0em;
 }
-div.content div.title:first-child {
+div.content div.ad-title:first-child {
   padding-top: 0.0em;
 }
-div.content + div.title {
+div.content + div.ad-title {
   padding-top: 0.0em;
 }
 
