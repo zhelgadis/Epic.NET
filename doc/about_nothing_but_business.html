@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Nothing but business</title><link rel="stylesheet" href="/layout.css" type="text/css" /><link rel="stylesheet" href="/screen.css" type="text/css" /><link rel="stylesheet" href="documentation.css" type="text/css" /><meta name="generator" content="DocBook XSL Stylesheets V1.75.2" /><link rel="home" href="index.html" title="Dominant Domains" /><link rel="up" href="index.html" title="Dominant Domains" /><link rel="prev" href="index.html" title="Dominant Domains" /><meta charset="utf-8" /><title>Epic - dominant domains</title><link rel="icon" href="favicon.ico" /><link rel="alternate" type="application/atom+xml" title="Development log" href="atom.xml" /><!--[if !IE 7]>
-	
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Nothing but business</title><link rel="stylesheet" href="/layout.css" type="text/css" /><link rel="stylesheet" href="/screen.css" type="text/css" /><link rel="stylesheet" href="documentation.css" type="text/css" /><meta name="generator" content="DocBook XSL Stylesheets V1.75.2" /><link rel="home" href="index.html" title="Dominant Domains" /><link rel="up" href="index.html" title="Dominant Domains" /><link rel="prev" href="index.html" title="Dominant Domains" /><link rel="next" href="about_toward_a_shared_modeling_grammar.html" title="Part I. Toward a shared modeling grammar" /><meta charset="utf-8" /><link rel="icon" href="favicon.ico" /><link rel="alternate" type="application/atom+xml" title="Development log" href="atom.xml" /><!--[if !IE 7]>
+     
 		#wrap {display:table;height:100%}
 	
   <![endif]--><!--[if lt IE 8]>
-	
-		#header {padding-top: 9px}
-	
+     
+        #header {padding-top: 9px}
+    
   <![endif]--><!--[if IE 8]>
-	
+     
 		#wrap {width:100%}
 	
-  <![endif]--></head><body><div id="wrap"><div id="header"><a href="http://github.com/Shamar/Epic.NET/"><img style="position: absolute; top: 0; left: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_left_orange_ff7600.png" alt="Fork me on GitHub" /></a><div class="title">Epic</div><span>dominant domains</span></div><div id="main"><div id="content"><div class="preface" title="Nothing but business"><div class="titlepage"><div><div><h2 class="title"><a id="_nothing_but_business"></a>Nothing but business</h2></div></div></div><div class="toc"><ul><li><a href="/doc/" class="toc-title">Table of Contents</a></li><li><span class="section"><a href="pr01.html#_a_dependency_inversion">A dependency inversion</a></span></li><li><span class="section"><a href="pr01.html#_what_is_epic">What is Epic?</a></span><ul><li><span class="section"><a href="pr01.html#_more_than_theories">More than theories</a></span></li></ul></li><li><span class="section"><a href="pr01.html#_all_that_glitters_ain_8217_t_gold">All that glitters ain’t gold!</a></span></li><li><span class="section"><a href="pr01.html#_target_audience">Target audience</a></span></li><li><span class="section"><a href="pr01.html#_the_structure_of_this_manual">The structure of this manual</a></span></li></ul></div><p>In the foreword of Evans' book, Martin Fowler stated:</p><div class="blockquote"><table border="0" width="100%" cellspacing="0" cellpadding="0" class="blockquote" summary="Block quote"><tr><td width="10%" valign="top"> </td><td width="80%" valign="top"><p>There are many things that make software development complex.
+  <![endif]--></head><body><div id="wrap"><div id="header"><a href="http://github.com/Shamar/Epic.NET/"><img style="position: absolute; top: 0; left: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_left_orange_ff7600.png" alt="Fork me on GitHub" /></a><div class="title">Epic</div><span>dominant domains</span></div><div id="main"><div id="content"><div class="preface" title="Nothing but business"><div class="titlepage"><div><div><h2 class="title"><a id="about_nothing_but_business"></a>Nothing but business</h2></div></div></div><div class="toc"><ul><li><a href="/doc/" class="toc-title">Table of Contents</a></li><li><span class="section"><a href="about_nothing_but_business.html#about_a_dependency_inversion">A dependency inversion</a></span></li><li><span class="section"><a href="about_nothing_but_business.html#about_what_is_epic">What is Epic?</a></span><ul><li><span class="section"><a href="about_nothing_but_business.html#about_more_than_theories">More than theories</a></span></li></ul></li><li><span class="section"><a href="about_nothing_but_business.html#about_all_that_glitters_ain_8217_t_gold">All that glitters ain’t gold!</a></span></li><li><span class="section"><a href="about_nothing_but_business.html#about_target_audience">Target audience</a></span></li><li><span class="section"><a href="about_nothing_but_business.html#about_the_structure_of_this_manual">The structure of this manual</a></span></li></ul></div><p>In the foreword of Evans' book, Martin Fowler stated:</p><div class="blockquote"><table border="0" width="100%" cellspacing="0" cellpadding="0" class="blockquote" summary="Block quote"><tr><td width="10%" valign="top"> </td><td width="80%" valign="top"><p>There are many things that make software development complex.
 But the heart of this complexity is the essential intricacy of the problem
 domain itself. If you’re trying to add automation to complicated human
 enterprise, than your software cannot dodge this complexity — all it can do is
@@ -32,7 +32,7 @@ frameworks, we are mixing two order of complexities: business rules and
 technological constraints.</p><p>"I don’t fight my framework!" you would say. Evans explicitly wrote that we
 should not. Actually, most of the times it is the wisest choice.</p><p>But what if you had a framework that hasn’t to be fought? What if you could
 easily adapt any infrastructure to clean models that capture the
-business processes only?</p><p>What if we could simply code nothing but business?</p><div class="section" title="A dependency inversion"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_a_dependency_inversion"></a>A dependency inversion</h2></div></div></div><p>In 2004 the European Union issued the Markets in Financial Instruments
+business processes only?</p><p>What if we could simply code nothing but business?</p><div class="section" title="A dependency inversion"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_a_dependency_inversion"></a>A dependency inversion</h2></div></div></div><p>In 2004 the European Union issued the Markets in Financial Instruments
 Directive (also known as MiFID). The main objectives of the directive
 were to increase competition and consumer protection in investment services.
 Suddenly many big banks all over the europe begun to adapt their advisory
@@ -45,13 +45,13 @@ indipendent from the infrastructural choises that each bank would had taken.
 Moreover the problem was too complex to take technological compromises.
 We had to protect the model as the most important asset in our stack.
 We had to base our entire stack on the domain model itself, adapting
-everything else.</p><p>But unfortunately, Epic did not exist.</p></div><div class="section" title="What is Epic?"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_what_is_epic"></a>What is Epic?</h2></div></div></div><p>After a long climb towards trials, failures and insights, we realized a set of
+everything else.</p><p>But unfortunately, Epic did not exist.</p></div><div class="section" title="What is Epic?"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_what_is_epic"></a>What is Epic?</h2></div></div></div><p>After a long climb towards trials, failures and insights, we realized a set of
 modeling patterns and practices that works very well together against complex
 domains.</p><p>We took so much confidence in such patterns, that when we now see problems in
 their adoption, we often start a new whirpool to get a deeper insight of the
 context. Such process often shows a misunderstanding in the domain language.</p><p>At the core, Epic is a coherent set of modeling patterns, best practices
 and lessons learned (with a lots of anti-patterns to avoid: did you know that
-lazy loading and event brokers are among our new singletons?).</p><div class="section" title="More than theories"><div class="titlepage"><div><div><h3 class="title"><a id="_more_than_theories"></a>More than theories</h3></div></div></div><p>As you will see, some of the patterns we propose are really challenging from
+lazy loading and event brokers are among our new singletons?).</p><div class="section" title="More than theories"><div class="titlepage"><div><div><h3 class="title"><a id="about_more_than_theories"></a>More than theories</h3></div></div></div><p>As you will see, some of the patterns we propose are really challenging from
 a technological point of view.</p><p>If not taken together as a whole, they could seem impossible to implement.
 Actually, they <span class="strong"><strong>are</strong></span> impossible to implement (correctly) if mixed with those we
 propose as anti-patterns. We learned this the hard way.</p><p>So what?</p><p>Well, Epic is more than a set of coherent patterns: we designed a framework and
@@ -70,14 +70,14 @@ follow a simple, predictable and traceable development process, that
   could become very fast, thanks to its parallelization’s capabilities
 </li><li class="listitem">
 minimize the effects of infrastructural changes on the application reliability
-</li></ul></div></div></div><div class="section" title="All that glitters ain’t gold!"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_all_that_glitters_ain_8217_t_gold"></a>All that glitters ain’t gold!</h2></div></div></div><p>Epic will never help you to cut modeling hours. On the contrary, you should
+</li></ul></div></div></div><div class="section" title="All that glitters ain’t gold!"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_all_that_glitters_ain_8217_t_gold"></a>All that glitters ain’t gold!</h2></div></div></div><p>Epic will never help you to cut modeling hours. On the contrary, you should
 invest a lot on them! Whenever you have any doubt about the business, stop
 coding, kidnap the domain expert and start a new exploration whirpool.</p><p>Moreover, it require high skills in object oriented design. Such skills are
 rather expensive to acquire and thus building a productive team using Epic will
 require budget. As a conseguence Epic will minimize the development efforts
 and maximize the software quality (cutting maintenance’s costs), but will not
 reduce the budgets required.</p><p>Keep this in mind: Epic could overwhelm simple projects!</p><p>Avoid Epic (and domain driven design) when you do not have complex business
-rules and do not require high reliability while sticking to such rules.</p></div><div class="section" title="Target audience"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_target_audience"></a>Target audience</h2></div></div></div><p>This manual is targeted to people involved in the entire lifecycle of
+rules and do not require high reliability while sticking to such rules.</p></div><div class="section" title="Target audience"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_target_audience"></a>Target audience</h2></div></div></div><p>This manual is targeted to people involved in the entire lifecycle of
 enterprise applications with custom development.
 An obvious prerequisite is a good experience in software development and
 object oriented design. Furthermore a good understanding of the Evans book is
@@ -89,7 +89,7 @@ In particular, they will appreciate the concreteness that Epic
 imposes to the development process, always looking for a better understanding
 of the customers' processes.</p><p>Modelers and developers will gain a set of powerful tools, that will
 increase their ability to cut complexity into indipendent axes, allowing an
-easy parallelization of development efforts.</p></div><div class="section" title="The structure of this manual"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="_the_structure_of_this_manual"></a>The structure of this manual</h2></div></div></div><p>The first part of the manual introduce patterns and practices that come from
+easy parallelization of development efforts.</p></div><div class="section" title="The structure of this manual"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_the_structure_of_this_manual"></a>The structure of this manual</h2></div></div></div><p>The first part of the manual introduce patterns and practices that come from
 real-life challenges encountered by a team of developers building corporate
 applications.
 Such patterns will constrain (and thus will ease) the design, the development
@@ -97,4 +97,4 @@ and the evolution of the domain model itself.
 As such it is mostly written for "hands on" modelers and architects.</p><p>The second part document the various components of the Epic framework.
 It’s designed for the full development team (from DBA to GUI designers).</p><p>Finally, the third part will target architects, team leaders and project
 managers, describing the process' changes that could be required by the
-adoption of Epic.</p></div></div><div class="navfooter"><hr /><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="index.html">Prev</a> </td><td width="20%" align="center"> </td><td width="40%" align="right"> </td></tr><tr><td width="40%" align="left" valign="top">Dominant Domains </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> </td></tr></table></div></div></div></div><div id="footer"><div class="copyright">Copyright © 2010-2011 Giacomo Tesio</div></div></body></html>
+adoption of Epic.</p></div></div><div class="navfooter"><hr /><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="index.html">Prev</a> </td><td width="20%" align="center"> </td><td width="40%" align="right"> <a accesskey="n" href="about_toward_a_shared_modeling_grammar.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Dominant Domains </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> Part I. Toward a shared modeling grammar</td></tr></table></div></div></div></div><div id="footer"><div class="copyright">Copyright © 2010-2011 Giacomo Tesio</div></div></body></html>
