@@ -59,3 +59,7 @@ div.book {padding-top:80px}
 .book a.toc-title, .part a.toc-title {color:black;border:0px}
 .book a.toc-title:hover, .part a.toc-title:hover {color:black;border:0px}
 .book a.toc-title:visited, .part a.toc-title:visited {color:black;border:0px}
+
+div.warning {padding-top: 10px; padding-bottom:10px; border-left: 3px solid #DDD;}
+div.warning td {padding-right:10px;}
+div.warning img {padding:5px;}
