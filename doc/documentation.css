@@ -61,4 +61,4 @@ div.warning table, div.tip table {border-left: 3px solid #DDD;}
 div.warning td, div.tip td {padding-right:10px;}
 div.warning img, div.tip img {padding:5px;vertical-align:middle}
 
-code.literal {color: #199597}
+code.literal {background-color: #EEE;}
