@@ -13,12 +13,16 @@
 		#wrap {width:100%}
 	</style>
   <![endif]--></head><body><div id="wrap"><div id="header"><a href="http://github.com/Shamar/Epic.NET/"><img style="position: absolute; top: 0; left: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_left_orange_ff7600.png" alt="Fork me on GitHub" /></a><div class="title">Epic</div><span>dominant domains</span></div><div id="main"><div id="content"><div class="chapter" title="Chapter 2. Bounded Roles"><div class="titlepage"><div><div><h2 class="title"><a id="bounded_roles"></a>Chapter 2. Bounded Roles</h2></div></div></div><div class="toc"><ul><li><a href="/doc/manual.html" class="toc-title">Table of Contents</a></li><li><span class="section"><a href="bounded_roles.html#about_know_your_users">Know your users</a></span></li><li><span class="section"><a href="bounded_roles.html#about_binding_roles_to_contexts">Binding roles to contexts</a></span></li><li><span class="section"><a href="bounded_roles.html#about_a_junction_point">A junction point</a></span></li></ul></div><p>Whenever you have to deal with a large project, you’ll have to
-define a set of bounded contexts, each describing a different point of view
+define a set of bounded contexts, each describing a different <span class="strong"><strong>point of view</strong></span>
 upon the same concepts.</p><p>What is an entity in a context will be a value object in another.</p><p>When related to enterprise processes, such contexts will be connected to the
 organization chart: different users can access to different contexts, often
 with slightly different capabilities.</p><p>Moreover, while you can sell the same domain model to different organizations,
-you can’t neither predict nor generalize the organizational structure.
-You can make your software configurable, but whenever the access control
+you can’t neither predict nor generalize the organizational structure.</p><div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png" /></td><th align="left"></th></tr><tr><td align="left" valign="top"><p>In the second chapter of Analysis Pattern, Martin Fowler describe a
+set of patterns for accountability management. While such patterns are both
+elegant and powerfull we found them affected by a major flaw: they are not
+part of the ubiquitous language.
+We prefer to learn the language from domain experts instead of teaching them
+our own.</p></td></tr></table></div><p>You can make your software configurable, but whenever the access control
 rules are complex enough you fall in a customization hell that will erode
 the return on investment.</p><p>As an alternative, we decided to model the typical roles of the customer’s
 organization, each providing the entry-point to a bounded context.</p><p>This was hard to explain to our stakeholders, since for each new customer
@@ -38,7 +42,7 @@ that assistants must be able to operate for their boss, that private bankers
 are not born equals and that exceptions exists… just to make you crazy.</p><p>If you ever thought to model each kind of user, you know what I mean.</p><p>Nevertheless you need to know what each user can do, when and how.
 Delegating such logic to the infrastructure is just an illusion: you are
 moving the problem elsewhere (often where it’s harder to solve non-trivial
-cases).</p></div><div class="section" title="Binding roles to contexts"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_binding_roles_to_contexts"></a>Binding roles to contexts</h2></div></div></div><p>The solution we found was to model the roles of customer’s organization after
+cases).</p></div><div class="section" title="Binding roles to contexts"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_binding_roles_to_contexts"></a>Binding roles to contexts</h2></div></div></div><p>The solution we found is to model the roles of customer’s organization after
 the domain contexts.</p><p>Each role provides access to a set of repositories, domain services,
 responsibility and tools just like any real role in any real enterprise.
 We found that roles follow almost exactly the context boundaries of our best

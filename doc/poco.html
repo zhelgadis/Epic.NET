@@ -12,7 +12,7 @@
     <style type="text/css">
 		#wrap {width:100%}
 	</style>
-  <![endif]--></head><body><div id="wrap"><div id="header"><a href="http://github.com/Shamar/Epic.NET/"><img style="position: absolute; top: 0; left: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_left_orange_ff7600.png" alt="Fork me on GitHub" /></a><div class="title">Epic</div><span>dominant domains</span></div><div id="main"><div id="content"><div class="chapter" title="Chapter 1. Plain old CLR objects"><div class="titlepage"><div><div><h2 class="title"><a id="poco"></a>Chapter 1. Plain old CLR objects</h2></div></div></div><div class="toc"><ul><li><a href="/doc/manual.html" class="toc-title">Table of Contents</a></li><li><span class="section"><a href="poco.html#about_fix_the_gap">Fix the gap</a></span></li><li><span class="section"><a href="poco.html#about_nothing_but_business_again">Nothing but business (again)</a></span></li><li><span class="section"><a href="poco.html#about_contracts_matter">Contracts matter</a></span></li></ul></div><p>Let’s be honest, object-oriented programming is not old in the .NET ecosystem.</p><p>When compared to the Java or C++ world, the penetration of design patterns
+  <![endif]--></head><body><div id="wrap"><div id="header"><a href="http://github.com/Shamar/Epic.NET/"><img style="position: absolute; top: 0; left: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_left_orange_ff7600.png" alt="Fork me on GitHub" /></a><div class="title">Epic</div><span>dominant domains</span></div><div id="main"><div id="content"><div class="chapter" title="Chapter 1. Plain old CLR objects"><div class="titlepage"><div><div><h2 class="title"><a id="poco"></a>Chapter 1. Plain old CLR objects</h2></div></div></div><div class="toc"><ul><li><a href="/doc/manual.html" class="toc-title">Table of Contents</a></li><li><span class="section"><a href="poco.html#about_fix_the_gap">Fix the gap</a></span></li><li><span class="section"><a href="poco.html#about_nothing_but_business_again">Nothing but business (again)</a></span></li><li><span class="section"><a href="poco.html#about_contracts_matter">Contracts matter</a></span></li><li><span class="section"><a href="poco.html#about_typed_explicitness">Typed explicitness</a></span></li></ul></div><p>Let’s be honest, object-oriented programming is not old in the .NET ecosystem.</p><p>When compared to the Java or C++ world, the penetration of design patterns
 is quite recent, and the early adoption of service-oriented architectures
 showing a brute separation between data and behaviours is symptomatic of the
 tension between the complexities of object-orientated programming and the
@@ -30,7 +30,7 @@ enterprise applications.</p><p>Linq and events are among our favourite features.
 it has. This is important when you know you’ll have to hire.</p><p>Nevertheless we already experienced how well-written documentation, good
 teachers and pair programming can become powerful training tools,
 and we decided to sistematically use them.</p></div><div class="section" title="Nothing but business (again)"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_nothing_but_business_again"></a>Nothing but business (again)</h2></div></div></div><p>The first thing we decided to teach to newcomers has been the POJO silver
-bullet. <sup>[<a id="id436633" href="#ftn.id436633" class="footnote">1</a>]</sup></p><p>We have a complex infrastructure that evolved over the years and often require
+bullet. <sup>[<a id="id495803" href="#ftn.id495803" class="footnote">1</a>]</sup></p><p>We have a complex infrastructure that evolved over the years and often require
 customization for each customer.
 Instead, most business rules are the same all over the world (expecially in
 financial markets).
@@ -58,5 +58,23 @@ decoupling: fixing bugs in the domain model will never require clients'
 </li><li class="listitem">
 easy injection and proxing (the Epic’s trick to conquer the world).
 </li></ul></div><p>The development parallelization is so strong that it paid the investment alone.</p><p>However the flip side shows an increment in the efforts required for project
-management (from 5 to 20 percent, following granularity of contexts).</p></div><div class="footnotes"><br /><hr width="100" align="left" /><div class="footnote"><p><sup>[<a id="ftn.id436633" href="#id436633" class="simpara">1</a>] </sup>This is not a typo: the POJO term was coined for Java.
+management (from 5 to 20 percent, following granularity of contexts).</p></div><div class="section" title="Typed explicitness"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_typed_explicitness"></a>Typed explicitness</h2></div></div></div><p><span class="strong"><strong>Make everything explicit</strong></span>, avoid abstractions that domain experts ignore.</p><p>This has been the harder lesson we learnt.</p><p>We choose a strongly typed language to minimize the risk for implicitness.
+Each useful concept should have its own type in the domain.
+Bytes are cheaper than bugs.</p><p>A modeler should never abstract concepts on his own, his code should
+solely express the expert’s vision. This is difficult to achieve for us, since
+programmers are trained for abstract thinking, but all the abstractions
+introduced without the explicit support of the domain expert led us to very
+subtle and expensive bugs.</p><p>On the opposite, keeping the models down-to-earth and sticking to the target
+business gave us good code that has been reused in different banks.</p><p>This could seem counterintuitive, but you should avoid patterns designed to
+make your code maintainable or fast. Of course they are valuable per se,
+but whenever you leave the ubiquitous language to introduce them, you
+are always introducing long-term bugs.</p><p>Implicitness leads to a dangerous self-confidence: you think that everything
+works as expected just becouse you are not looking at the full picture.
+When new challenges arise, a fully explicit domain will evolve easily and
+in a predictable amount of time.</p><p>While someone finds such approach a bit naive, it is a carefully analyzed
+simplification that moves us back to the origin of object-orientated
+programming. Indeed, while working on big corporate softwares, an easy and
+fast comunication is more valuable that a reuse-oriented design.
+Reuse will come after the use, when your code will have paid the bill for a
+while.</p></div><div class="footnotes"><br /><hr width="100" align="left" /><div class="footnote"><p><sup>[<a id="ftn.id495803" href="#id495803" class="simpara">1</a>] </sup>This is not a typo: the POJO term was coined for Java.
 When it was ported to .NET it was a oxymoron.</p></div></div></div><div class="navfooter"><hr /><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="a_shared_modeling_grammar.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="a_shared_modeling_grammar.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="bounded_roles.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Part I. Toward a shared modeling grammar </td><td width="20%" align="center"><a accesskey="h" href="manual.html">Table of Contents</a></td><td width="40%" align="right" valign="top"> Chapter 2. Bounded Roles</td></tr></table></div></div></div></div><div id="footer"><div class="copyright">Copyright © 2010-2011 Giacomo Tesio</div></div><script type="text/javascript">SyntaxHighlighter.all()</script></body></html>

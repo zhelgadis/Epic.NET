@@ -42,7 +42,26 @@ entity’s queries should never throw exceptions;
 commands must be well documented and thrown exceptions should be
   listed and explained already in the interfaces.
 </li></ul></div><div class="warning" title="Warning" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Warning"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Warning]" src="images/warning.png" /></td><th align="left"></th></tr><tr><td align="left" valign="top"><p>This is probably the major concern in the choice of C# for modeling
-tasks. Checked exceptions would be valuable for us! We want that client breaks
+tasks. Checked exceptions would be valuable for us! We want that clients breaks
 as early as possible when we change the domain.</p></td></tr></table></div><p>We apply these rules without exception. Epic will provide a set of Gendarme’s
 rules to check the adherence to such rules, but it will not force them by
-default.</p></div><div class="section" title="Idempotence"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_idempotence"></a>Idempotence</h2></div></div></div><p>Coming soon.</p></div></div><div class="navfooter"><hr /><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="shared_identifiers.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="a_shared_modeling_grammar.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="observable_entities.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Chapter 3. Shared Identifiers </td><td width="20%" align="center"><a accesskey="h" href="manual.html">Table of Contents</a></td><td width="40%" align="right" valign="top"> Chapter 5. Observable Entities</td></tr></table></div></div></div></div><div id="footer"><div class="copyright">Copyright © 2010-2011 Giacomo Tesio</div></div><script type="text/javascript">SyntaxHighlighter.all()</script></body></html>
+default.</p></div><div class="section" title="Idempotence"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_idempotence"></a>Idempotence</h2></div></div></div><p>Idempotence is another well known principle in math and functional programming.
+It is the property of operations that can be applied multiple
+times without changing the result.</p><p>C# does not handle referential transparency and since we design mutable
+entities, idempotence can not be adopted as when we programm, say, in Haskell.
+Nevertheless it profitable to prefer idempotent APIs.</p><p>Methods of both value objects and domain services should be designed to be
+idempotent.
+However, when they get an entity as an argument the result could change among
+subsequent calls, as the entity recieves a command.</p><div class="tip" title="Tip" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png" /></td><th align="left"></th></tr><tr><td align="left" valign="top"><p>Each instance of an entity holds a mutable state that affects the
+result of depending queries.</p></td></tr></table></div><p>Entities' queries are a bit trickier: you should always get the same result
+when calling with the same arguments, until either the method’s owner or the
+arguments recieve a command.</p><p>Commands of entities are even more complex: you should design them to be
+idempotent as far as possible. For example, you could prefer methods like
+<code class="literal">SetSomething()</code> instead of <code class="literal">AddSomething()</code> and <code class="literal">RemoveSomething()</code>, thus
+allowing idempotence (and reducing the interface size) without
+affecting comprehensibility.</p><div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png" /></td><th align="left"></th></tr><tr><td align="left" valign="top"><p>Often it’s quite easy to get idempotent APIs. See for example the
+<code class="literal">IVoyage</code> interface in the DDDSample from the Epic source code: commands like
+<code class="literal">StopOver(ILocation)</code> and <code class="literal">DepartFrom(ILocation)</code> are both idempotent and
+expressive.
+If a voyage either departs from a location or stop over a location twice,
+it will always be in the same state.</p></td></tr></table></div></div></div><div class="navfooter"><hr /><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="shared_identifiers.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="a_shared_modeling_grammar.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="observable_entities.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Chapter 3. Shared Identifiers </td><td width="20%" align="center"><a accesskey="h" href="manual.html">Table of Contents</a></td><td width="40%" align="right" valign="top"> Chapter 5. Observable Entities</td></tr></table></div></div></div></div><div id="footer"><div class="copyright">Copyright © 2010-2011 Giacomo Tesio</div></div><script type="text/javascript">SyntaxHighlighter.all()</script></body></html>
