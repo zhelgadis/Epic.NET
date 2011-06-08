@@ -30,7 +30,7 @@ upon the same concepts.</p><p>What is an entity in a context will be a value obj
 organization chart: different users can access to different contexts, often
 with slightly different capabilities.</p><p>Moreover, while you can sell the same domain model to different organizations,
 you can’t neither predict nor generalize the organizational structure.
-<sup>[<a id="id346912" href="#ftn.id346912" class="footnote">2</a>]</sup>
+<sup>[<a id="id398365" href="#ftn.id398365" class="footnote">2</a>]</sup>
 You can make your software configurable, but whenever the access control
 rules are complex enough you fall in a customization hell that will erode
 the return on investment.</p><p>As an alternative, we decided to model the typical roles of the customer’s
@@ -57,7 +57,7 @@ responsibility and tools just like any real role in any real enterprise.
 We found that roles follow almost exactly the context boundaries of our best
 domains, sometimes customized with addictional requirements.</p><p>We were not afraid to write specific code for each customer, confident that a
 satisfied customer would have paid more.</p></div><div class="section" title="Complexity partition"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_complexity_partition"></a>Complexity partition</h2></div></div></div><p>Bounded contexts are among the most undervalued tools in software development.
-They are useful beyond the niche of domain-driven development.</p><p>As you know, when an application grows, its own complexity increases.
+They are useful beyond the niche of domain-driven development.</p><p>As you know, when an application grows, its own complexity increases.<br />
 Developers try to avoid spaghetti-code, by applying a set of smart design
 patterns that should allow for easier evolution.
 However, the "overdesign" hell is just around the corner.
@@ -76,9 +76,9 @@ infrastructural code.</p><p>For example the repositories can bind the user’s a
 according to the fanciest rules that your customer can imagine, the domain
 services can be customized to log calls or to cache results and everything you
 hate will become easy.</p><p>You just have to deal with angry stakeholders that will tell you: "but we
-already did it three months ago!"</p></div><div class="footnotes"><br /><hr width="100" align="left" /><div class="footnote"><p><sup>[<a id="ftn.id346912" href="#id346912" class="simpara">2</a>] </sup>In the second chapter of Analysis Pattern, Martin Fowler describe a
+already did it three months ago!"</p></div><div class="footnotes"><br /><hr width="100" align="left" /><div class="footnote"><p><sup>[<a id="ftn.id398365" href="#id398365" class="simpara">2</a>] </sup>In the second chapter of Analysis Pattern, Martin Fowler describe a
 set of patterns for accountability management. While such patterns are both
 elegant and powerfull we found them affected by a major flaw: they are not
-part of the ubiquitous language.
+part of the ubiquitous language.<br />
 We prefer to learn the language from domain experts instead of teaching them
 our own.</p></div></div></div><div class="navfooter"><hr /><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="poco.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="a_shared_modeling_grammar.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="shared_identifiers.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Chapter 1. Plain old CLR objects </td><td width="20%" align="center"><a accesskey="h" href="manual.html">Table of Contents</a></td><td width="40%" align="right" valign="top"> Chapter 3. Shared Identifiers</td></tr></table></div></div></div></div><div id="footer"><div class="copyright">Copyright © 2010-2011 Giacomo Tesio</div></div><script type="text/javascript">SyntaxHighlighter.all()</script></body></html>

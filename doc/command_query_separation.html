@@ -53,7 +53,7 @@ entity’s queries should never throw exceptions;
 </li><li class="listitem">
 commands must be well documented and thrown exceptions should be
   listed and explained already in the interfaces.
-</li></ul></div><div class="warning" title="Warning" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Warning"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Warning]" src="images/warning.png" /></td><th align="left"></th></tr><tr><td align="left" valign="top"><p>This is probably the major concern in the choice of C# for modeling
+</li></ul></div><div class="caution" title="Caution" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Caution"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Caution]" src="images/caution.png" /></td><th align="left"></th></tr><tr><td align="left" valign="top"><p>This is probably the major concern in the choice of C# for modeling
 tasks. Checked exceptions would be valuable for us! We want that clients breaks
 as early as possible when we change the domain.</p></td></tr></table></div><p>We apply these rules without exception. Epic will provide a set of Gendarme’s
 rules to check the adherence to such rules, but it will not force them by
@@ -74,6 +74,6 @@ allowing idempotence (and reducing the interface size) without
 affecting comprehensibility.</p><p>Indeed, it’s often quite easy to adopt idempotent APIs. See for example the
 <code class="literal">IVoyage</code> interface in the DDDSample from the Epic source code: commands like
 <code class="literal">StopOver(ILocation)</code> and <code class="literal">DepartFrom(ILocation)</code> are both idempotent and
-expressive.
+expressive.<br />
 If a voyage either departs from a location or stop over a location twice,
 it will always be in the same state.</p></div></div><div class="navfooter"><hr /><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="shared_identifiers.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="a_shared_modeling_grammar.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="observable_entities.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Chapter 3. Shared Identifiers </td><td width="20%" align="center"><a accesskey="h" href="manual.html">Table of Contents</a></td><td width="40%" align="right" valign="top"> Chapter 5. Observable Entities</td></tr></table></div></div></div></div><div id="footer"><div class="copyright">Copyright © 2010-2011 Giacomo Tesio</div></div><script type="text/javascript">SyntaxHighlighter.all()</script></body></html>
