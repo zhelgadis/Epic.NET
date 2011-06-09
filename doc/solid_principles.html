@@ -38,8 +38,8 @@ Robert C. Martin
 change". He states that if you can think of more than one motive for changing a
 class, than that class has more than one responsibility.
 However, whenever no change actually occur, separating responsibility could
-smell of needless complexity.</p><p>In a domain model rightly partitioned in context, there are tree legitimate
-reasons for change:</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+smell of needless complexity.</p><p>In a domain model rightly partitioned in contexts, there are only tree
+legitimate reasons for change:</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
 business evolution,
 </li><li class="listitem">
 deeper insight,
@@ -48,22 +48,23 @@ bug fixes.
 </li></ul></div><p>Since all profitable enterprises evolve, the models that capture their
 processes will need to be updated. This kind of changes can not be anticipated
 and they affect almost everything in an application built with Epic. <br />
-The good news is that the customer acknowledge about the change he is
-asking for and he is willing to pay. <sup>[<a id="id515759" href="#ftn.id515759" class="footnote">4</a>]</sup></p><p>Whenever you get a deeper insight into a domain, you are in a economical
+The good news is that the customer acknowledges about the change he is
+asking for and he is willing to pay. <sup>[<a id="id456196" href="#ftn.id456196" class="footnote">4</a>]</sup></p><p>Whenever you get a deeper insight into a domain, you are in a economical
 dilemma: should we change the code or not? And why? Just to clarify the
 model’s expression through the code? <br />
 Finding the right answer to these questions is hard and should be done
 carefully. You should consider factors like the complexity of the new model and
 of the previous one, the time available, the long term cost of postponing the
-refactoring (a cost always undervalued that slowly increases each day), the cost
-of all workaround that you’ll have to implement without the new model and so on. <br />
+refactoring (a cost always undervalued, that slowly increases each day),
+the cost of all workarounds that you’ll have to implement without the new
+model and so on. <br />
 My own, personal, opinion is that most of times the refactoring should be
 planned with the customer. If it’s not a trivial task, you should never hide to
 the customer the problems emerged with the previous model.</p><p>Finally, as there’s no software without bug, all fixes will force you to modify
 the model. This could seem quite obvious, but it has a nasty side effect: you
 could introduce new subtle untracked bugs.
 Unit tests' code coverage could reduce the risks but can not eliminate them.
-<sup>[<a id="id515793" href="#ftn.id515793" class="footnote">5</a>]</sup>
+<sup>[<a id="id456230" href="#ftn.id456230" class="footnote">5</a>]</sup>
 Fortunatly, since no bug should relate to contracts (or it will lead you to a
 far more expensive refactoring toward a deeper insight), all the code depending
 on the broken component don’t even need to be recompiled.</p></div><div class="section" title="Open-Closed"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_open_closed"></a>Open-Closed</h2></div></div></div><div class="blockquote"><table border="0" width="100%" cellspacing="0" cellpadding="0" class="blockquote" summary="Block quote"><tr><td width="10%" valign="top"> </td><td width="80%" valign="top"><p>Software entities (classes, modules, functions, etc.) should be open for
@@ -85,12 +86,14 @@ Robert C. Martin
 </span></td></tr></table></div></div><div class="section" title="Interface Segregation"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_interface_segregation"></a>Interface Segregation</h2></div></div></div><div class="blockquote"><table border="0" width="100%" cellspacing="0" cellpadding="0" class="blockquote" summary="Block quote"><tr><td width="10%" valign="top"> </td><td width="80%" valign="top"><p>Clients should not be forced to depend on methods that they do not use.</p></td><td width="10%" valign="top"> </td></tr><tr><td width="10%" valign="top"> </td><td colspan="2" align="right" valign="top">--<span class="attribution">
 Robert C. Martin
 <em class="citetitle">Agile Software Development, Principles, Patterns, and Practices (2002)</em>
-</span></td></tr></table></div></div><div class="footnotes"><br /><hr width="100" align="left" /><div class="footnote"><p><sup>[<a id="ftn.id515759" href="#id515759" class="simpara">4</a>] </sup>How will be explained into
+</span></td></tr></table></div></div><div class="footnotes"><br /><hr width="100" align="left" /><div class="footnote"><p><sup>[<a id="ftn.id456196" href="#id456196" class="simpara">4</a>] </sup>How will be explained into
 the third part of the book, in such a case you should consider whether to
 write a new bounded context or modify the current one.
 The number of production environments running the current code could be a
-persuasive argument in one sence or another.</p></div><div class="footnote"><p><sup>[<a id="ftn.id515793" href="#id515793" class="simpara">5</a>] </sup>I think that the domain model implementation should take pride in a
+persuasive argument in one sense or another.</p></div><div class="footnote"><p><sup>[<a id="ftn.id456230" href="#id456230" class="simpara">5</a>] </sup>I think that the domain model implementation should take pride in a
 full code coverage (100%). This seems expensive at first, when you are at 97%
 and you can’t find a way to test those dirty three lines.
 However, a full code coverage will force you to read your code over and over
-again, drastically improving the quality of the implementation itself.</p></div></div></div><div class="navfooter"><hr /><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="observable_entities.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="a_shared_modeling_grammar.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="single_mutable_state.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Chapter 5. Observable Entities </td><td width="20%" align="center"><a accesskey="h" href="manual.html">Table of Contents</a></td><td width="40%" align="right" valign="top"> Chapter 7. Single Mutable State</td></tr></table></div></div></div></div><div id="footer"><div class="copyright">Copyright © 2010-2011 Giacomo Tesio</div></div><script type="text/javascript">SyntaxHighlighter.all()</script></body></html>
+again, drastically improving the quality of the implementation itself.
+The ROI of such kind of revision is often bigger than that of the tests
+themselves as safety net.</p></div></div></div><div class="navfooter"><hr /><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="observable_entities.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="a_shared_modeling_grammar.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="single_mutable_state.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Chapter 5. Observable Entities </td><td width="20%" align="center"><a accesskey="h" href="manual.html">Table of Contents</a></td><td width="40%" align="right" valign="top"> Chapter 7. Single Mutable State</td></tr></table></div></div></div></div><div id="footer"><div class="copyright">Copyright © 2010-2011 Giacomo Tesio</div></div><script type="text/javascript">SyntaxHighlighter.all()</script></body></html>
