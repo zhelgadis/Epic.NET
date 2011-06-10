@@ -55,14 +55,14 @@ advanced status of the project.</p><p>That being said, I prefer our previous app
 saw a major issue in Dahan’s method: <span class="strong"><strong>implicitness</strong></span>.</p><p>Only the code knows which events that an command can fire. You should read the
 code of each entity to see which events you could subscribe.
 You could add relevant events without changing the clients.
-<sup>[<a id="id395467" href="#ftn.id395467" class="footnote">4</a>]</sup></p><p>Would we have the time to change the existing code base, I would disliked the
+<sup>[<a id="id540774" href="#ftn.id540774" class="footnote">4</a>]</sup></p><p>Would we have the time to change the existing code base, I would disliked the
 choose. Indeed with Epic and the Observable Entities pattern you could get all
 the advantages of the dispatching tecnique described, in a much more explicit
 and natural way (as the .NET events could be exposed in the contracts).</p></div><div class="section" title="Did you feel that earthquake?!"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_did_you_feel_that_earthquake"></a>Did you feel that earthquake?!</h2></div></div></div><p>What if a relevant event do not belong to any known entity?</p><p>Although very uncommon, such circumstance exists.</p><p>The "Domain Events" pattern would handle the headless events as all others.</p><p>In the context of Epic, instead, you have to model them as events connected to
 the one that percieve them: the user (playing a role). Indeed, each user has an
 identity, and when he play a bounded role, he can percieve interesting events
 from the outside world. We just transferred such simple observation into the
-code (explicitly, in the contracts).</p></div><div class="footnotes"><br /><hr width="100" align="left" /><div class="footnote"><p><sup>[<a id="ftn.id395467" href="#id395467" class="simpara">4</a>] </sup>If you maintained a complex corporate software for more than one
+code (explicitly, in the contracts).</p></div><div class="footnotes"><br /><hr width="100" align="left" /><div class="footnote"><p><sup>[<a id="ftn.id540774" href="#id540774" class="simpara">4</a>] </sup>If you maintained a complex corporate software for more than one
 year and you aren’t paid by the hour, you know how such implicitness can
 become a nightmare during deployments. <br />
 There’s no denying that there is a profitable software business in
