@@ -34,7 +34,7 @@ stability of your models, improving their quality even from a design point
 of view.</p><div class="section" title="Single Responsibility"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_single_responsibility"></a>Single Responsibility</h2></div></div></div><div class="blockquote"><table border="0" width="100%" cellspacing="0" cellpadding="0" class="blockquote" summary="Block quote"><tr><td width="10%" valign="top"> </td><td width="80%" valign="top"><p>A class should have only <span class="strong"><strong>one</strong></span> reason to change.</p></td><td width="10%" valign="top"> </td></tr><tr><td width="10%" valign="top"> </td><td colspan="2" align="right" valign="top">--<span class="attribution">
 Robert C. Martin
 <em class="citetitle">Agile Software Development, Principles, Patterns, and Practices (2002)</em>
-</span></td></tr></table></div><p>In the context of the SRP, Martin define a responsibility to be "a reason for
+</span></td></tr></table></div><p>In the context of the SRP, Martin defines a responsibility to be "a reason for
 change". He states that if you can think of more than one motive for changing a
 class, than that class has more than one responsibility.
 However, whenever no change actually occur, separating responsibility could
@@ -49,7 +49,7 @@ bug fixes.
 processes will need to be updated. This kind of changes can not be anticipated
 and they affect almost everything in an application built with Epic. <br />
 The good news is that the customer acknowledges about the change he is
-asking for and he is willing to pay. <sup>[<a id="id441042" href="#ftn.id441042" class="footnote">4</a>]</sup></p><p>Whenever you get a deeper insight into a domain, you are in a economical
+asking for and he is willing to pay. <sup>[<a id="id453814" href="#ftn.id453814" class="footnote">4</a>]</sup></p><p>Whenever you get a deeper insight into a domain, you are in a economical
 dilemma: should we change the code or not? And why? Just to clarify the
 model’s expression through the code? <br />
 Finding the right answer to these questions is hard and should be done
@@ -64,10 +64,14 @@ the customer the problems emerged with the previous model.</p><p>Finally, as the
 the model. This could seem quite obvious, but it has a nasty side effect: you
 could introduce new subtle untracked bugs.
 Unit tests' code coverage could reduce the risks but can not eliminate them.
-<sup>[<a id="id441076" href="#ftn.id441076" class="footnote">5</a>]</sup>
+<sup>[<a id="id453847" href="#ftn.id453847" class="footnote">5</a>]</sup>
 Fortunatly, since no bug should relate to contracts (or it will lead you to a
 far more expensive refactoring toward a deeper insight), all the code depending
-on the broken component don’t even need to be recompiled.</p></div><div class="section" title="Open-Closed"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_open_closed"></a>Open-Closed</h2></div></div></div><div class="blockquote"><table border="0" width="100%" cellspacing="0" cellpadding="0" class="blockquote" summary="Block quote"><tr><td width="10%" valign="top"> </td><td width="80%" valign="top"><p>Software entities (classes, modules, functions, etc.) should be open for
+on the broken component don’t even need to be recompiled. Indeed, one of the
+reason that led us to introduce a thin layer of pure interfaces around the
+domain model implementation was the evaluation of the deploy’s costs of bug
+fixes. With such interfaces, we can minimize the number of layers affected by a
+bug in the domain, reducing the system stops and the loss for our customer.</p></div><div class="section" title="Open-Closed"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_open_closed"></a>Open-Closed</h2></div></div></div><div class="blockquote"><table border="0" width="100%" cellspacing="0" cellpadding="0" class="blockquote" summary="Block quote"><tr><td width="10%" valign="top"> </td><td width="80%" valign="top"><p>Software entities (classes, modules, functions, etc.) should be open for
 extension, but closed for modification.</p></td><td width="10%" valign="top"> </td></tr><tr><td width="10%" valign="top"> </td><td colspan="2" align="right" valign="top">--<span class="attribution">
 Robert C. Martin
 <em class="citetitle">Agile Software Development, Principles, Patterns, and Practices (2002)</em>
@@ -86,11 +90,11 @@ Robert C. Martin
 </span></td></tr></table></div></div><div class="section" title="Interface Segregation"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_interface_segregation"></a>Interface Segregation</h2></div></div></div><div class="blockquote"><table border="0" width="100%" cellspacing="0" cellpadding="0" class="blockquote" summary="Block quote"><tr><td width="10%" valign="top"> </td><td width="80%" valign="top"><p>Clients should not be forced to depend on methods that they do not use.</p></td><td width="10%" valign="top"> </td></tr><tr><td width="10%" valign="top"> </td><td colspan="2" align="right" valign="top">--<span class="attribution">
 Robert C. Martin
 <em class="citetitle">Agile Software Development, Principles, Patterns, and Practices (2002)</em>
-</span></td></tr></table></div></div><div class="footnotes"><br /><hr width="100" align="left" /><div class="footnote"><p><sup>[<a id="ftn.id441042" href="#id441042" class="simpara">4</a>] </sup>How will be explained into
+</span></td></tr></table></div></div><div class="footnotes"><br /><hr width="100" align="left" /><div class="footnote"><p><sup>[<a id="ftn.id453814" href="#id453814" class="simpara">4</a>] </sup>How will be explained into
 the third part of the book, in such a case you should consider whether to
 write a new bounded context or modify the current one.
 The number of production environments running the current code could be a
-persuasive argument in one sense or another.</p></div><div class="footnote"><p><sup>[<a id="ftn.id441076" href="#id441076" class="simpara">5</a>] </sup>I think that the domain model implementation should take pride in a
+persuasive argument in one sense or another.</p></div><div class="footnote"><p><sup>[<a id="ftn.id453847" href="#id453847" class="simpara">5</a>] </sup>I think that the domain model implementation should take pride in a
 full code coverage (100%). This seems expensive at first, when you are at 97%
 and you can’t find a way to test those dirty three lines.
 However, a full code coverage will force you to read your code over and over
