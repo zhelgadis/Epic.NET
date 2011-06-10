@@ -59,7 +59,20 @@ as early as possible when we change the domain.</p></td></tr></table></div><p>We
 rules to check the adherence to such rules, but it will not force them by
 default.</p></div><div class="section" title="What about factory methods?"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_what_about_factory_methods"></a>What about factory methods?</h2></div></div></div><p>Factory methods are worth a dedicated section since it could be difficult to
 ponder whether they are queries or commands.</p><p>We all know the creational pattern that encapsulates the creation of objects in
-a method owned by another class (either static or not).</p></div><div class="section" title="Idempotence"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_idempotence"></a>Idempotence</h2></div></div></div><p>Idempotence is another well known principle in math and functional programming.
+a method owned by another class (either static or not).</p><p>In the context of Epic, you should separate two kind of factory methods:</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+those that build value objects (such as specifications, itineraries or
+  moneys);
+</li><li class="listitem">
+those that build entities.
+</li></ul></div><p>Providing a new instance of a value object do not change the system: you can
+create all the copies of a <code class="literal">EquityQuantity</code> you like, but until you do not
+<code class="literal">Buy()</code> that quantity, your securities account don’t change! <br />
+Since such operation do not change the observable state of the sistem, it is a
+query and should return a value.</p><p>Creating a new securities account, instead, deeply changes the system: first
+the bank smiles, but what matter is that the identifier assigned to your
+account is taken forever. No other account can take that identifier.<br />
+This is definitively a command: it should be a void method and the new account
+(or its identifier at least) should be returned in an <code class="literal">out</code> parameter.</p></div><div class="section" title="Idempotence"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_idempotence"></a>Idempotence</h2></div></div></div><p>Idempotence is another well known principle in math and functional programming.
 It is the property of operations that can be applied multiple
 times without changing the result.</p><p>C# does not handle referential transparency and since we design mutable
 entities, idempotence can not be adopted as when we programm, say, in Haskell.
