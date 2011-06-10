@@ -71,7 +71,7 @@ Since such operation do not change the observable state of the sistem, it is a
 query and should return a value.</p><p>Creating a new securities account, instead, deeply changes the system: first
 the bank smiles, but what matter is that the identifier assigned to your
 account is taken forever. No other account can take that identifier.<br />
-This is definitively a command: it should be a void method and the new account
+This is definitely a command: it should be a void method and the new account
 (or its identifier at least) should be returned in an <code class="literal">out</code> parameter.</p></div><div class="section" title="Idempotence"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_idempotence"></a>Idempotence</h2></div></div></div><p>Idempotence is another well known principle in math and functional programming.
 It is the property of operations that can be applied multiple
 times without changing the result.</p><p>C# does not handle referential transparency and since we design mutable
