@@ -49,7 +49,7 @@ bug fixes.
 processes will need to be updated. This kind of changes can not be anticipated
 and they affect almost everything in an application built with Epic. <br />
 The good news is that the customer acknowledges about the change he is
-asking for and he is willing to pay. <sup>[<a id="id593868" href="#ftn.id593868" class="footnote">5</a>]</sup></p><p>Whenever you get a deeper insight into a domain, you are in a economical
+asking for and he is willing to pay. <sup>[<a id="id543897" href="#ftn.id543897" class="footnote">5</a>]</sup></p><p>Whenever you get a deeper insight into a domain, you are in a economical
 dilemma: should we change the code or not? And why? Just to clarify the
 model’s expression through the code? <br />
 Finding the right answer to these questions is hard and should be done
@@ -64,7 +64,7 @@ the customer the problems emerged with the previous model.</p><p>Finally, as the
 the model. This could seem quite obvious, but it has a nasty side effect: you
 could introduce new subtle untracked bugs.
 Unit tests' code coverage could reduce the risks but can not eliminate them.
-<sup>[<a id="id593901" href="#ftn.id593901" class="footnote">6</a>]</sup>
+<sup>[<a id="id543930" href="#ftn.id543930" class="footnote">6</a>]</sup>
 Fortunatly, since no bug should relate to contracts (or it will lead you to a
 far more expensive refactoring toward a deeper insight), all the code depending
 on the broken component don’t even need to be recompiled. Indeed, one of the
@@ -115,11 +115,11 @@ related to identifiers, of course. For example, we never needed to introduce a
 quantity abstraction.</p></div><div class="section" title="Interface Segregation"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_interface_segregation"></a>Interface Segregation</h2></div></div></div><div class="blockquote"><table border="0" width="100%" cellspacing="0" cellpadding="0" class="blockquote" summary="Block quote"><tr><td width="10%" valign="top"> </td><td width="80%" valign="top"><p>Clients should not be forced to depend on methods that they do not use.</p></td><td width="10%" valign="top"> </td></tr><tr><td width="10%" valign="top"> </td><td colspan="2" align="right" valign="top">--<span class="attribution">
 Robert C. Martin
 <em class="citetitle">Agile Software Development, Principles, Patterns, and Practices (2002)</em>
-</span></td></tr></table></div><p>The simple definition that Martin provides for ISP gave us a big advise: the
+</span></td></tr></table></div><p>The simple definition that Martin provides for ISP give us a big advise: the
 definition of the context’s boundary is a fundamental step in the domain-driven
-development process. Indeed, small contexts contains well defined contracts
-that lead to small classes.</p><p>Shared kernels are another marveluos tool to enforce interface segregation:
-for example they can hold base contracts shared between different contexts.</p><p>For example, in the idiomatic DDDSample provided with the Epic source code, you
+development process. Indeed, small contexts contain well defined contracts
+that lead to small classes.</p><p>Shared kernels are another marvelous tool to enforce interface segregation:
+for example they contain base contracts shared between different contexts.</p><p>For example, in the idiomatic DDDSample provided with the Epic source code, you
 can see how the <code class="literal">IVoyage</code> violate the ISP: it has query methods used from user
 impersonating an <code class="literal">ILongshoreman</code> when loading cargos into each voyage and
 commands for user impersonating an <code class="literal">IPortAuthority</code>.<br />
@@ -166,11 +166,11 @@ Abstractions should not depend on details.
 </li></ol></div></td><td width="10%" valign="top"> </td></tr><tr><td width="10%" valign="top"> </td><td colspan="2" align="right" valign="top">--<span class="attribution">
 Robert C. Martin
 <em class="citetitle">Agile Software Development, Principles, Patterns, and Practices (2002)</em>
-</span></td></tr></table></div></div><div class="footnotes"><br /><hr width="100" align="left" /><div class="footnote"><p><sup>[<a id="ftn.id593868" href="#id593868" class="simpara">5</a>] </sup>How will be explained into
+</span></td></tr></table></div></div><div class="footnotes"><br /><hr width="100" align="left" /><div class="footnote"><p><sup>[<a id="ftn.id543897" href="#id543897" class="simpara">5</a>] </sup>How will be explained into
 the third part of the book, in such a case you should consider whether to
 write a new bounded context or modify the current one.
 The number of production environments running the current code could be a
-persuasive argument in one sense or another.</p></div><div class="footnote"><p><sup>[<a id="ftn.id593901" href="#id593901" class="simpara">6</a>] </sup>I think that the domain model implementation should take pride in a
+persuasive argument in one sense or another.</p></div><div class="footnote"><p><sup>[<a id="ftn.id543930" href="#id543930" class="simpara">6</a>] </sup>I think that the domain model implementation should take pride in a
 full code coverage (100%). This seems expensive at first, when you are at 97%
 and you can’t find a way to test those dirty three lines.
 However, a full code coverage will force you to read your code over and over
