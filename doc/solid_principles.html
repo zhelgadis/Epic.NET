@@ -24,7 +24,7 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 
-  </script></head><body><div id="wrap"><div id="header"><a href="http://github.com/Shamar/Epic.NET/"><img style="position: absolute; top: 0; left: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_left_orange_ff7600.png" alt="Fork me on GitHub" /></a><a class="title" href="/">Epic</a><span>dominant domains</span></div><div id="main"><div id="content"><div class="chapter" title="Chapter 6. SOLID Principles"><div class="titlepage"><div><div><h2 class="title"><a id="solid_principles"></a>Chapter 6. SOLID Principles</h2></div></div></div><div class="toc"><ul><li><a href="/doc/manual.html" class="toc-title">Table of Contents</a></li><li><span class="section"><a href="solid_principles.html#about_single_responsibility">Single Responsibility</a></span></li><li><span class="section"><a href="solid_principles.html#about_open_closed">Open-Closed</a></span></li><li><span class="section"><a href="solid_principles.html#about_liskov_substitution">Liskov Substitution</a></span></li><li><span class="section"><a href="solid_principles.html#about_dependency_inversion">Dependency Inversion</a></span></li><li><span class="section"><a href="solid_principles.html#about_interface_segregation">Interface Segregation</a></span></li></ul></div><p>We all know the principles introduced by Robert C. Martin in the early 2000s.
+  </script></head><body><div id="wrap"><div id="header"><a href="http://github.com/Shamar/Epic.NET/"><img style="position: absolute; top: 0; left: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_left_orange_ff7600.png" alt="Fork me on GitHub" /></a><a class="title" href="/">Epic</a><span>dominant domains</span></div><div id="main"><div id="content"><div class="chapter" title="Chapter 6. SOLID Principles"><div class="titlepage"><div><div><h2 class="title"><a id="solid_principles"></a>Chapter 6. SOLID Principles</h2></div></div></div><div class="toc"><ul><li><a href="/doc/manual.html" class="toc-title">Table of Contents</a></li><li><span class="section"><a href="solid_principles.html#about_single_responsibility">Single Responsibility</a></span></li><li><span class="section"><a href="solid_principles.html#about_open_closed">Open-Closed</a></span></li><li><span class="section"><a href="solid_principles.html#about_liskov_substitution">Liskov Substitution</a></span></li><li><span class="section"><a href="solid_principles.html#about_interface_segregation">Interface Segregation</a></span></li><li><span class="section"><a href="solid_principles.html#about_dependency_inversion">Dependency Inversion</a></span></li></ul></div><p>We all know the principles introduced by Robert C. Martin in the early 2000s.
 They are milestones in the evolution of OOP and they are still valid ten years
 later.</p><p>However, when applied to a domain model, they need some small adjustments
 based upon the unfortunate experiences of a few experienced developers facing
@@ -49,7 +49,7 @@ bug fixes.
 processes will need to be updated. This kind of changes can not be anticipated
 and they affect almost everything in an application built with Epic. <br />
 The good news is that the customer acknowledges about the change he is
-asking for and he is willing to pay. <sup>[<a id="id533486" href="#ftn.id533486" class="footnote">5</a>]</sup></p><p>Whenever you get a deeper insight into a domain, you are in a economical
+asking for and he is willing to pay. <sup>[<a id="id593868" href="#ftn.id593868" class="footnote">5</a>]</sup></p><p>Whenever you get a deeper insight into a domain, you are in a economical
 dilemma: should we change the code or not? And why? Just to clarify the
 model’s expression through the code? <br />
 Finding the right answer to these questions is hard and should be done
@@ -64,7 +64,7 @@ the customer the problems emerged with the previous model.</p><p>Finally, as the
 the model. This could seem quite obvious, but it has a nasty side effect: you
 could introduce new subtle untracked bugs.
 Unit tests' code coverage could reduce the risks but can not eliminate them.
-<sup>[<a id="id533520" href="#ftn.id533520" class="footnote">6</a>]</sup>
+<sup>[<a id="id593901" href="#ftn.id593901" class="footnote">6</a>]</sup>
 Fortunatly, since no bug should relate to contracts (or it will lead you to a
 far more expensive refactoring toward a deeper insight), all the code depending
 on the broken component don’t even need to be recompiled. Indeed, one of the
@@ -85,8 +85,8 @@ your design, the code will be as stable as that rules.</p><p>For example, if you
 wheat field, you can sell him a new context instead of adding new classes to
 the previous one.</p><p>To further keep the model closed to modification you could take cheap design
 decisions that do not smell of needless complexity. For example, since our
-models run in different technological environments (from ASP.NET pages to
-data loaders and WinForm applications) we choosed to mark all the classes
+models run in different technological environments (ASP.NET pages, data loaders,
+web services and WinForm applications) we choosed to mark all the classes
 belonging to the domain model with the <code class="literal">SerializableAttribute</code>. Moreover,
 when we got the first customer that required realtime synchronization
 between different applications running the same domain, we designed the
@@ -99,7 +99,65 @@ never leave a class unsealed just to keep an open door behind.</p><p>The good ne
 you can replace Epic without any model’s recompilation.</p></div><div class="section" title="Liskov Substitution"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_liskov_substitution"></a>Liskov Substitution</h2></div></div></div><div class="blockquote"><table border="0" width="100%" cellspacing="0" cellpadding="0" class="blockquote" summary="Block quote"><tr><td width="10%" valign="top"> </td><td width="80%" valign="top"><p>Subtypes must be substitutable for their base types.</p></td><td width="10%" valign="top"> </td></tr><tr><td width="10%" valign="top"> </td><td colspan="2" align="right" valign="top">--<span class="attribution">
 Robert C. Martin
 <em class="citetitle">Agile Software Development, Principles, Patterns, and Practices (2002)</em>
-</span></td></tr></table></div></div><div class="section" title="Dependency Inversion"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_dependency_inversion"></a>Dependency Inversion</h2></div></div></div><div class="blockquote"><table border="0" width="100%" cellspacing="0" cellpadding="0" class="blockquote" summary="Block quote"><tr><td width="10%" valign="top"> </td><td width="80%" valign="top"><div class="orderedlist"><ol class="orderedlist" type="a"><li class="listitem">
+</span></td></tr></table></div><p>We’ve already said that no modeler should introduce in the model’s abstractions
+ignored by the domain experts, since they lead to smell of rigidity and long
+term bugs.</p><p>We value the LSP a lot, since we had some very expensive experiences with its
+violations. While the principle heavily reduces the applicability of
+object-oriented inheritance, it avoids the infamous yo-yo problem: bug fixes
+are cheaper, if you can rapidly understand the model’s code.</p><p>We learnt that apply this principle to the domain-driven design, we need that
+no entity is abstracted beyond its own identifier: all the entities in a
+hierarchy must share the same kind of identifiers. For example, all type
+of securities can be identified by their ISIN (or their RIC, or so).<br />
+Though we see an evident abstraction between two types, we avoid it’s
+introduction until the domain expert give us the green light. Moreover he has
+to explain us <span class="strong"><strong>how</strong></span> the abstraction is useful in the context.</p><p>Value objects abstractions follow the same rule, but do not have any constraint
+related to identifiers, of course. For example, we never needed to introduce a
+quantity abstraction.</p></div><div class="section" title="Interface Segregation"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_interface_segregation"></a>Interface Segregation</h2></div></div></div><div class="blockquote"><table border="0" width="100%" cellspacing="0" cellpadding="0" class="blockquote" summary="Block quote"><tr><td width="10%" valign="top"> </td><td width="80%" valign="top"><p>Clients should not be forced to depend on methods that they do not use.</p></td><td width="10%" valign="top"> </td></tr><tr><td width="10%" valign="top"> </td><td colspan="2" align="right" valign="top">--<span class="attribution">
+Robert C. Martin
+<em class="citetitle">Agile Software Development, Principles, Patterns, and Practices (2002)</em>
+</span></td></tr></table></div><p>The simple definition that Martin provides for ISP gave us a big advise: the
+definition of the context’s boundary is a fundamental step in the domain-driven
+development process. Indeed, small contexts contains well defined contracts
+that lead to small classes.</p><p>Shared kernels are another marveluos tool to enforce interface segregation:
+for example they can hold base contracts shared between different contexts.</p><p>For example, in the idiomatic DDDSample provided with the Epic source code, you
+can see how the <code class="literal">IVoyage</code> violate the ISP: it has query methods used from user
+impersonating an <code class="literal">ILongshoreman</code> when loading cargos into each voyage and
+commands for user impersonating an <code class="literal">IPortAuthority</code>.<br />
+To enforce the interface segregation, we should write a shared kernel
+containing at least <code class="literal">VoyageNumber</code>, <code class="literal">UnLocode</code> and an +IVoyage like this:</p><script type="syntaxhighlighter" class="brush: csharp">namespace Sample.Cargo.Kernel
+{
+        /// &lt;summary&gt;
+        /// A Voyage.
+        /// &lt;/summary&gt;
+        public interface IVoyage
+    {
+                /// &lt;summary&gt;
+                /// Voyage identification number.
+                /// &lt;/summary&gt;
+                VoyageNumber Number { get; }
+
+                /// &lt;summary&gt;
+                /// True if the voyage is moving toward the next arrival.
+                /// &lt;/summary&gt;
+                bool IsMoving { get; }
+
+                /// &lt;summary&gt;
+                /// Last known location.
+                /// &lt;/summary&gt;
+                UnLocode LastKnownLocation { get; }
+    }
+}</script><p>With such kernel, the <code class="literal">ICargo</code> interface would have taken this interface
+instead of the bigger <code class="literal">Challenge00.DDDSample.Voyage.IVoyage</code>.</p><p>However in this case, we had two good reason to violate the ISP:</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+<code class="literal">IVoyage</code> and <code class="literal">ICargo</code> are in the same assembly and share the same fate
+</li><li class="listitem">
+The hypothetical customer (A.C.M.E.) do not seem interessed into a software
+  to manage ships, planes or freight train (that would lead to a different
+  <code class="literal">IVoyage</code> in a new context)
+</li><li class="listitem">
+We need two roles with different permissions over the same class to show the
+  Epic.Security system.
+</li></ul></div><p>However in our financial domains we have a substantial shared kernel full of
+such kind of interfaces and shared identifiers.</p></div><div class="section" title="Dependency Inversion"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_dependency_inversion"></a>Dependency Inversion</h2></div></div></div><div class="blockquote"><table border="0" width="100%" cellspacing="0" cellpadding="0" class="blockquote" summary="Block quote"><tr><td width="10%" valign="top"> </td><td width="80%" valign="top"><div class="orderedlist"><ol class="orderedlist" type="a"><li class="listitem">
 High-level modules should not depend on low-level modules.
    Both should depend on abstractions.
 </li><li class="listitem">
@@ -108,14 +166,11 @@ Abstractions should not depend on details.
 </li></ol></div></td><td width="10%" valign="top"> </td></tr><tr><td width="10%" valign="top"> </td><td colspan="2" align="right" valign="top">--<span class="attribution">
 Robert C. Martin
 <em class="citetitle">Agile Software Development, Principles, Patterns, and Practices (2002)</em>
-</span></td></tr></table></div></div><div class="section" title="Interface Segregation"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_interface_segregation"></a>Interface Segregation</h2></div></div></div><div class="blockquote"><table border="0" width="100%" cellspacing="0" cellpadding="0" class="blockquote" summary="Block quote"><tr><td width="10%" valign="top"> </td><td width="80%" valign="top"><p>Clients should not be forced to depend on methods that they do not use.</p></td><td width="10%" valign="top"> </td></tr><tr><td width="10%" valign="top"> </td><td colspan="2" align="right" valign="top">--<span class="attribution">
-Robert C. Martin
-<em class="citetitle">Agile Software Development, Principles, Patterns, and Practices (2002)</em>
-</span></td></tr></table></div></div><div class="footnotes"><br /><hr width="100" align="left" /><div class="footnote"><p><sup>[<a id="ftn.id533486" href="#id533486" class="simpara">5</a>] </sup>How will be explained into
+</span></td></tr></table></div></div><div class="footnotes"><br /><hr width="100" align="left" /><div class="footnote"><p><sup>[<a id="ftn.id593868" href="#id593868" class="simpara">5</a>] </sup>How will be explained into
 the third part of the book, in such a case you should consider whether to
 write a new bounded context or modify the current one.
 The number of production environments running the current code could be a
-persuasive argument in one sense or another.</p></div><div class="footnote"><p><sup>[<a id="ftn.id533520" href="#id533520" class="simpara">6</a>] </sup>I think that the domain model implementation should take pride in a
+persuasive argument in one sense or another.</p></div><div class="footnote"><p><sup>[<a id="ftn.id593901" href="#id593901" class="simpara">6</a>] </sup>I think that the domain model implementation should take pride in a
 full code coverage (100%). This seems expensive at first, when you are at 97%
 and you can’t find a way to test those dirty three lines.
 However, a full code coverage will force you to read your code over and over
