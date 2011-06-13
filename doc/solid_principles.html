@@ -49,7 +49,7 @@ bug fixes.
 processes will need to be updated. This kind of changes can not be anticipated
 and they affect almost everything in an application built with Epic. <br />
 The good news is that the customer acknowledges about the change he is
-asking for and he is willing to pay. <sup>[<a id="id543897" href="#ftn.id543897" class="footnote">5</a>]</sup></p><p>Whenever you get a deeper insight into a domain, you are in a economical
+asking for and he is willing to pay. <sup>[<a id="id506452" href="#ftn.id506452" class="footnote">5</a>]</sup></p><p>Whenever you get a deeper insight into a domain, you are in a economical
 dilemma: should we change the code or not? And why? Just to clarify the
 model’s expression through the code? <br />
 Finding the right answer to these questions is hard and should be done
@@ -64,7 +64,7 @@ the customer the problems emerged with the previous model.</p><p>Finally, as the
 the model. This could seem quite obvious, but it has a nasty side effect: you
 could introduce new subtle untracked bugs.
 Unit tests' code coverage could reduce the risks but can not eliminate them.
-<sup>[<a id="id543930" href="#ftn.id543930" class="footnote">6</a>]</sup>
+<sup>[<a id="id506486" href="#ftn.id506486" class="footnote">6</a>]</sup>
 Fortunatly, since no bug should relate to contracts (or it will lead you to a
 far more expensive refactoring toward a deeper insight), all the code depending
 on the broken component don’t even need to be recompiled. Indeed, one of the
@@ -119,11 +119,11 @@ Robert C. Martin
 definition of the context’s boundary is a fundamental step in the domain-driven
 development process. Indeed, small contexts contain well defined contracts
 that lead to small classes.</p><p>Shared kernels are another marvelous tool to enforce interface segregation:
-for example they contain base contracts shared between different contexts.</p><p>For example, in the idiomatic DDDSample provided with the Epic source code, you
-can see how the <code class="literal">IVoyage</code> violate the ISP: it has query methods used from user
-impersonating an <code class="literal">ILongshoreman</code> when loading cargos into each voyage and
+for example they contain base contracts shared between different contexts.</p><p>In the idiomatic DDDSample provided with the Epic source code, you
+can see how the <code class="literal">IVoyage</code> violate the ISP: it has query methods used from a
+<code class="literal">ILongshoreman</code> when loading cargos into each voyage, and
 commands for user impersonating an <code class="literal">IPortAuthority</code>.<br />
-To enforce the interface segregation, we should write a shared kernel
+To enforce the interface segregation, we could write a shared kernel
 containing at least <code class="literal">VoyageNumber</code>, <code class="literal">UnLocode</code> and an +IVoyage like this:</p><script type="syntaxhighlighter" class="brush: csharp">namespace Sample.Cargo.Kernel
 {
         /// &lt;summary&gt;
@@ -146,13 +146,13 @@ containing at least <code class="literal">VoyageNumber</code>, <code class="lite
                 /// &lt;/summary&gt;
                 UnLocode LastKnownLocation { get; }
     }
-}</script><p>With such kernel, the <code class="literal">ICargo</code> interface would have taken this interface
+}</script><p>With such a kernel, the <code class="literal">ICargo</code> interface would have taken this interface
 instead of the bigger <code class="literal">Challenge00.DDDSample.Voyage.IVoyage</code>.</p><p>However in this case, we had two good reason to violate the ISP:</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
-<code class="literal">IVoyage</code> and <code class="literal">ICargo</code> are in the same assembly and share the same fate
+<code class="literal">IVoyage</code> and <code class="literal">ICargo</code> are in the same assembly and share the same fate;
 </li><li class="listitem">
 The hypothetical customer (A.C.M.E.) do not seem interessed into a software
   to manage ships, planes or freight train (that would lead to a different
-  <code class="literal">IVoyage</code> in a new context)
+  <code class="literal">IVoyage</code> in a new context);
 </li><li class="listitem">
 We need two roles with different permissions over the same class to show the
   Epic.Security system.
@@ -166,11 +166,20 @@ Abstractions should not depend on details.
 </li></ol></div></td><td width="10%" valign="top"> </td></tr><tr><td width="10%" valign="top"> </td><td colspan="2" align="right" valign="top">--<span class="attribution">
 Robert C. Martin
 <em class="citetitle">Agile Software Development, Principles, Patterns, and Practices (2002)</em>
-</span></td></tr></table></div></div><div class="footnotes"><br /><hr width="100" align="left" /><div class="footnote"><p><sup>[<a id="ftn.id543897" href="#id543897" class="simpara">5</a>] </sup>How will be explained into
+</span></td></tr></table></div><p>The dependency inversion is probably the most valuable feature that Epic
+provides in a domain-driven application. Indeed it is designed to allow a new,
+extreme, unexplored dependency inversion between the application and the
+domain model.<br />
+Instead of a domain model that depend on a framework, we build a framework
+designed to depend on the domain itself, adapting the architecture to
+the business of the customer.</p><p>In Epic, the highest level module is the domain model. It does not depend on
+anything else that interfaces belonging to the model itself.</p><p>Low-level modules as user interface, databases, logging infrastructure,
+web services, reporting services, service bus and so on, always depend on the
+domain model’s interfaces.</p></div><div class="footnotes"><br /><hr width="100" align="left" /><div class="footnote"><p><sup>[<a id="ftn.id506452" href="#id506452" class="simpara">5</a>] </sup>How will be explained into
 the third part of the book, in such a case you should consider whether to
 write a new bounded context or modify the current one.
 The number of production environments running the current code could be a
-persuasive argument in one sense or another.</p></div><div class="footnote"><p><sup>[<a id="ftn.id543930" href="#id543930" class="simpara">6</a>] </sup>I think that the domain model implementation should take pride in a
+persuasive argument in one sense or another.</p></div><div class="footnote"><p><sup>[<a id="ftn.id506486" href="#id506486" class="simpara">6</a>] </sup>I think that the domain model implementation should take pride in a
 full code coverage (100%). This seems expensive at first, when you are at 97%
 and you can’t find a way to test those dirty three lines.
 However, a full code coverage will force you to read your code over and over
