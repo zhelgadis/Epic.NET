@@ -64,9 +64,10 @@ those that build value objects (such as specifications, itineraries or
   moneys);
 </li><li class="listitem">
 those that build entities.
-</li></ul></div><p>Providing a new instance of a value object do not change the system: you can
-create all the copies of a <code class="literal">EquityQuantity</code> you like, but until you do not
-<code class="literal">Buy()</code> that quantity, your securities account don’t change! <br />
+</li></ul></div><p>Providing a new instance of a value object does not change the system: you can
+create all the copies of a <code class="literal">PreferredStockQuantity</code> you like, but until you do
+not <code class="literal">Purchase(PreferredStockQuantity)</code> that quantity, your securities account
+doesn’t change! <br />
 Since such operation do not change the observable state of the sistem, it is a
 query and should return a value.</p><p>Creating a new securities account, instead, deeply changes the system: first
 the bank smiles, but what matter is that the identifier assigned to your

@@ -29,7 +29,7 @@
 It’s optional, since the Epic infrastructure does not have any requirement in
 the domain model implementation: you can use sealed classes without any
 abstract base and without any attribute.
-<sup>[<a id="id568908" href="#ftn.id568908" class="footnote">7</a>]</sup><br />
+<sup>[<a id="id441079" href="#ftn.id441079" class="footnote">7</a>]</sup><br />
 However we suggest it beyond the context it was designed for.</p><p>Indeed the Epic.Server system is based on the thread safety that this
 pattern provide, to allow a easy to use, transparent and cheap CQRS system.
 So, if you think that your entities will eventually need the features provided
@@ -38,14 +38,32 @@ massively on all entities that you implement.</p><div class="tip" title="Tip" st
 the GoF State Pattern. A set of plugin for your favorite IDE will be provided
 soon to get rid of its verbosity and to enhance your productivity.</p></td></tr></table></div><div class="section" title="Intent"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_intent"></a>Intent</h2></div></div></div><p>Decouples state transitions from command invocation to enable concurrency and
 simplify synchronized access to an <span class="strong"><strong>entity</strong></span> that <span class="strong"><strong>can</strong></span> reside in its
-own thread of control. <sup>[<a id="id568957" href="#ftn.id568957" class="footnote">8</a>]</sup></p></div><div class="section" title="Motivation (Forces)"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_motivation_forces"></a>Motivation (Forces)</h2></div></div></div><p>A private banker and a customer share the full access to both a cash account
-and a securities account by distinct applications. Both users has the right to
-buy, sell or switch any fund as long as a set of rules and the constraints are
-respected in the resulting portfolio. Moreover, the customer can add or remove
-money without any out-of-bounds comunication with the private banker.</p><p>To enforce the business rules the different applications need a shared access
-to the entities that model the two accounts, but the different instances need
-a realtime sincronization. Moreover the bank’s lawyers prefer consistency to
-availability.</p><p>(To be continued)</p></div><div class="section" title="Applicability"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_applicability"></a>Applicability</h2></div></div></div><p>(Coming soon)</p></div><div class="section" title="Structure"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_structure"></a>Structure</h2></div></div></div><p>(Coming soon)</p></div><div class="section" title="Participants"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_participants"></a>Participants</h2></div></div></div><p>(Coming soon)</p></div><div class="section" title="Collaboration"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_collaboration"></a>Collaboration</h2></div></div></div><p>(Coming soon)</p></div><div class="section" title="Consequences"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_consequences"></a>Consequences</h2></div></div></div><p>(Coming soon)</p></div><div class="section" title="Implementation"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_implementation"></a>Implementation</h2></div></div></div><p>(Coming soon)</p></div><div class="section" title="Collaboration"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_collaboration_2"></a>Collaboration</h2></div></div></div><p>(Coming soon)</p></div><div class="section" title="Related Patterns"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_related_patterns"></a>Related Patterns</h2></div></div></div><p>(Coming soon)</p></div><div class="footnotes"><br /><hr width="100" align="left" /><div class="footnote"><p><sup>[<a id="ftn.id568908" href="#id568908" class="simpara">7</a>] </sup>Ok, I lied: pure interfaces for entities are required.
+own thread of control. <sup>[<a id="id441127" href="#ftn.id441127" class="footnote">8</a>]</sup></p></div><div class="section" title="Motivation (Forces)"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_motivation_forces"></a>Motivation (Forces)</h2></div></div></div><p>A private banker and a customer share the access to an investment proposal by
+distinct applications. The private banker modifies the proposal while he’s
+talking to the customer via phone.
+The customer can see the proposal’s evolution on his own terminal
+(suppose an IPhone app) and he can accept the proposal by clicking a button.
+Once the proposal has been accepted the advisor can not modify it further and
+the his application moves to a new screen where he can send the orders to the
+routing system of the bank.</p><p>To enforce the business rules, the different applications need a shared access
+to the proposal (a well known entity in the context), but the different
+instances need a realtime synchronization.
+Moreover, the bank’s lawyers prefer consistency to availability.</p><p>The key idea in this pattern is to implement the entity’s contract with a
+class containing a single mutable field, the entity state. Such states
+are immutable implementations of a common base class and rappresent the
+different operational states; they provide explicit state transitions for the
+commands in the contract. For example the abstract <code class="literal">InvestmentProposalState</code>
+replicates the contract of the related <code class="literal">InvestmentProposal</code>, but replaces
+commands like <code class="literal">void Acquire(FundQuote)</code> with queries like
+<code class="literal">InvestmentProposalState Acquire(FundQuote)</code> returning the new state that the
+<code class="literal">InvestmentProposal</code> will have. The <code class="literal">InvestmentProposal</code> will works like a
+proxy: it delegates to the current state all the recieved commands, it replaces
+the previous mutable state with an atomic operation (a Compare And Swap
+instruction) and it fires the relevant events.</p><p>This might seem complex (and it was, on the real world financial example
+described before), however a simple use case is shown in the
+<code class="literal">Cargo</code> / <code class="literal">CargoState</code> sample provided with Epic.</p></div><div class="section" title="Applicability"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_applicability"></a>Applicability</h2></div></div></div><p>Use the Single Mutable State pattern when you need a realtime synchronization
+between different applications running the same bounded context.</p><p>The thread safe access provided will be easy to implement and will leave your
+entities indipendent from the infrastructure (as they only depend on the CLR).</p></div><div class="section" title="Structure"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_structure"></a>Structure</h2></div></div></div><p>(Coming soon)</p></div><div class="section" title="Participants"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_participants"></a>Participants</h2></div></div></div><p>(Coming soon)</p></div><div class="section" title="Collaboration"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_collaboration"></a>Collaboration</h2></div></div></div><p>(Coming soon)</p></div><div class="section" title="Consequences"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_consequences"></a>Consequences</h2></div></div></div><p>(Coming soon)</p></div><div class="section" title="Implementation"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_implementation"></a>Implementation</h2></div></div></div><p>(Coming soon)</p></div><div class="section" title="Collaboration"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_collaboration_2"></a>Collaboration</h2></div></div></div><p>(Coming soon)</p></div><div class="section" title="Related Patterns"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_related_patterns"></a>Related Patterns</h2></div></div></div><p>(Coming soon)</p></div><div class="footnotes"><br /><hr width="100" align="left" /><div class="footnote"><p><sup>[<a id="ftn.id441079" href="#id441079" class="simpara">7</a>] </sup>Ok, I lied: pure interfaces for entities are required.
 But they have so many advantages beyond Epic, that they should already exist
-even just to enable unit tests of the client code.</p></div><div class="footnote"><p><sup>[<a id="ftn.id568957" href="#id568957" class="simpara">8</a>] </sup>We want entities that can reside in their own
+even just to enable unit tests of the client code.</p></div><div class="footnote"><p><sup>[<a id="ftn.id441127" href="#id441127" class="simpara">8</a>] </sup>We want entities that can reside in their own
 thread of control but that work equally well in a single threaded environment.</p></div></div></div><div class="navfooter"><hr /><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="repositories.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="a_shared_modeling_grammar.html">Up</a></td><td width="40%" align="right"> </td></tr><tr><td width="40%" align="left" valign="top">Chapter 7. Repositories </td><td width="20%" align="center"><a accesskey="h" href="manual.html">Table of Contents</a></td><td width="40%" align="right" valign="top"> </td></tr></table></div></div></div></div><div id="footer"><div class="copyright">Copyright © 2010-2011 Giacomo Tesio</div></div><script type="text/javascript">SyntaxHighlighter.all()</script></body></html>
