@@ -5,7 +5,7 @@ title: A step forward
 After two months of hard work, I welcome the 0.2 release of Epic.
 
 I can breathe again. Mountains of work are waiting in the next two steps,
-but this release has some value to the project _per se_.
+but this release add some value to the project _per se_.
 
 Epic.Core
 ---------
@@ -14,15 +14,16 @@ the [IEnterprise][1], that manages the livecycle of the users'
 [IWorkingSession][2].
 Through the working session a user can achieve or leave the allowed [roles][3], 
 that provide access to a set of repositories, domain services, responsibility 
-and tools, just like any real role in any real enterprise.
+and tools, just like all real roles in any real enterprise.
 
-All the code released is documented and feature a full coverage from unit test.
+All the code released is documented and features a full coverage from unit 
+tests.
 
 Documentation
 -------------
-Writing good documentation is hard. Hard and expensive.
+Writing good documentation is hard. Hard and **expensive**.
 
-However you can not predict the cost of building a *reliable* application upon 
+However you can not predict the cost of building a **reliable** application upon 
 an undocumented framework: developers can both misunderstand and misuse the 
 API and sometimes they have to debug the internals just to understand why a 
 strange exception has been thrown.
@@ -61,7 +62,7 @@ use my Debian box to build the manual in all the format that I need.
 Once I defined the toolchain, I wrote the first part of the manual, describing
 the patterns and practices that Epic advises.
 
-*All comments and feedback are very welcome.*
+**All comments and feedback are very welcome.**
 
 Note that I'm not a native English speaker: feel free to show me the mistakes!
 
