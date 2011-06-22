@@ -24,12 +24,12 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 
-  </script></head><body><div id="wrap"><div id="header"><a href="http://github.com/Shamar/Epic.NET/"><img style="position: absolute; top: 0; left: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_left_orange_ff7600.png" alt="Fork me on GitHub" /></a><a class="title" href="/">Epic</a><span>dominant domains</span></div><div id="main"><div id="content"><div class="chapter" title="Chapter 8. Single Mutable State"><div class="titlepage"><div><div><h2 class="title"><a id="single_mutable_state"></a>Chapter 8. Single Mutable State</h2></div></div></div><div class="toc"><ul><li><a href="/doc/manual.html" class="toc-title">Table of Contents</a></li><li><span class="section"><a href="single_mutable_state.html#about_intent">Intent</a></span></li><li><span class="section"><a href="single_mutable_state.html#about_motivation_forces">Motivation (Forces)</a></span></li><li><span class="section"><a href="single_mutable_state.html#about_applicability">Applicability</a></span></li><li><span class="section"><a href="single_mutable_state.html#about_structure">Structure</a></span></li><li><span class="section"><a href="single_mutable_state.html#about_participants">Participants</a></span></li><li><span class="section"><a href="single_mutable_state.html#about_collaboration">Collaboration</a></span></li><li><span class="section"><a href="single_mutable_state.html#about_consequences">Consequences</a></span></li><li><span class="section"><a href="single_mutable_state.html#about_implementation">Implementation</a></span></li><li><span class="section"><a href="single_mutable_state.html#about_sample_code">Sample Code</a></span></li><li><span class="section"><a href="single_mutable_state.html#about_related_patterns">Related Patterns</a></span></li></ul></div><p>The Single Mutable State is the only real design pattern that was designed
-(almost) from scratch for the implementation of the domain model’s entities.
+  </script></head><body><div id="wrap"><div id="header"><a href="http://github.com/Shamar/Epic.NET/"><img style="position: absolute; top: 0; left: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_left_orange_ff7600.png" alt="Fork me on GitHub" /></a><a class="title" href="/">Epic</a><span>dominant domains</span></div><div id="main"><div id="content"><div class="chapter" title="Chapter 8. Single Mutable State"><div class="titlepage"><div><div><h2 class="title"><a id="single_mutable_state"></a>Chapter 8. Single Mutable State</h2></div></div></div><div class="toc"><ul><li><a href="/doc/manual.html" class="toc-title">Table of Contents</a></li><li><span class="section"><a href="single_mutable_state.html#about_intent">Intent</a></span></li><li><span class="section"><a href="single_mutable_state.html#about_motivation">Motivation</a></span></li><li><span class="section"><a href="single_mutable_state.html#about_applicability">Applicability</a></span></li><li><span class="section"><a href="single_mutable_state.html#about_structure">Structure</a></span></li><li><span class="section"><a href="single_mutable_state.html#about_participants">Participants</a></span></li><li><span class="section"><a href="single_mutable_state.html#about_collaboration">Collaboration</a></span></li><li><span class="section"><a href="single_mutable_state.html#about_consequences">Consequences</a></span></li><li><span class="section"><a href="single_mutable_state.html#about_implementation">Implementation</a></span></li><li><span class="section"><a href="single_mutable_state.html#about_sample_code">Sample Code</a></span></li><li><span class="section"><a href="single_mutable_state.html#about_related_patterns">Related Patterns</a></span></li></ul></div><p>The Single Mutable State is the only real design pattern that was designed
+for the implementation of the domain model’s entities.
 It’s optional, since the Epic infrastructure does not have any requirement in
 the domain model implementation: you can use sealed classes without any
 abstract base and without any attribute.
-<sup>[<a id="id501700" href="#ftn.id501700" class="footnote">7</a>]</sup><br />
+<sup>[<a id="id573823" href="#ftn.id573823" class="footnote">7</a>]</sup><br />
 However we suggest it beyond the context it was designed for.</p><p>Indeed the Epic.Server system is based on the thread safety that this
 pattern provide, to allow a easy to use, transparent and cheap CQRS system.
 So, if you think that your entities will eventually need the features provided
@@ -38,7 +38,7 @@ massively on all entities that you implement.</p><div class="tip" title="Tip" st
 the GoF State Pattern. A plugin for your favorite IDE will be provided
 soon to get rid of its verbosity and to enhance your productivity.</p></td></tr></table></div><div class="section" title="Intent"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_intent"></a>Intent</h2></div></div></div><p>Decouples state transitions from command invocation to enable concurrency and
 simplify synchronized access to an <span class="strong"><strong>entity</strong></span> that <span class="strong"><strong>can</strong></span> reside in its
-own thread of control. <sup>[<a id="id501748" href="#ftn.id501748" class="footnote">8</a>]</sup></p></div><div class="section" title="Motivation (Forces)"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_motivation_forces"></a>Motivation (Forces)</h2></div></div></div><p>A private banker and a customer share the access to an investment proposal by
+own thread of control. <sup>[<a id="id573871" href="#ftn.id573871" class="footnote">8</a>]</sup></p></div><div class="section" title="Motivation"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_motivation"></a>Motivation</h2></div></div></div><p>A private banker and a customer share the access to an investment proposal by
 distinct applications. The private banker modifies the proposal while he’s
 talking to the customer via phone.
 The customer can see the proposal’s evolution on his own terminal
@@ -48,7 +48,7 @@ the his application moves to a new screen where he can send the orders to the
 routing system of the bank.</p><p>To enforce the business rules, the different applications need a shared access
 to the proposal (a well known entity in the context), but the different
 instances need a realtime synchronization.
-Moreover, the bank’s lawyers prefer consistency to availability.</p><p>The key idea in this pattern is to implement the entity’s contract with a
+Moreover, the bank’s <span class="strong"><strong>lawyers prefer consistency</strong></span> to availability.</p><p>The key idea in this pattern is to implement the entity’s contract with a
 class containing a single mutable field, the entity state. The entity delegates
 <span class="strong"><strong>all</strong></span> requests (both queries and commands) to this state object. Such states
 are immutable implementations of a common base class and rappresent the
@@ -157,14 +157,14 @@ use the right state to handle each request.</p><p>Here you can see the algoritm 
             if(null != handler)
                 handler(this, args);
         }
-        }
+    }
 
-        public event EventHandler&lt;EventArgs&gt; AssetAcquired;
+    public event EventHandler&lt;EventArgs&gt; AssetAcquired;
 }</script></div><div class="section" title="Sample Code"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_sample_code"></a>Sample Code</h2></div></div></div><p>In the motivation section a real world example from previous financial
 experience has been described. However the effort required to explain that
-domain model can overwhelm the manual.</p><p>The Epic source code is provided with the classical Evans' example implemented
+domain model would overwhelm the manual.</p><p>The Epic source code is provided with the classical Evans' example implemented
 using the pattern described here. Look at the Cargo entity for a full example.</p></div><div class="section" title="Related Patterns"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_related_patterns"></a>Related Patterns</h2></div></div></div><p>The classical State pattern from the Gang of Four is the noble father of
-the solution proposed here.</p></div><div class="footnotes"><br /><hr width="100" align="left" /><div class="footnote"><p><sup>[<a id="ftn.id501700" href="#id501700" class="simpara">7</a>] </sup>Ok, I lied: pure interfaces for entities are required.
-But they have so many advantages beyond Epic, that they should already exist
-even just to enable unit tests of the client code.</p></div><div class="footnote"><p><sup>[<a id="ftn.id501748" href="#id501748" class="simpara">8</a>] </sup>We want entities that can reside in their own
+the solution proposed here.</p></div><div class="footnotes"><br /><hr width="100" align="left" /><div class="footnote"><p><sup>[<a id="ftn.id573823" href="#id573823" class="simpara">7</a>] </sup>Ok, I lied: pure interfaces for entities are required.
+But they have so many advantages beyond Epic, that they should already exist,
+even just to enable unit tests of the client code.</p></div><div class="footnote"><p><sup>[<a id="ftn.id573871" href="#id573871" class="simpara">8</a>] </sup>We want entities that can reside in their own
 thread of control but that work equally well in a single threaded environment.</p></div></div></div><div class="navfooter"><hr /><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="repositories.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="a_shared_modeling_grammar.html">Up</a></td><td width="40%" align="right"> </td></tr><tr><td width="40%" align="left" valign="top">Chapter 7. Repositories </td><td width="20%" align="center"><a accesskey="h" href="manual.html">Table of Contents</a></td><td width="40%" align="right" valign="top"> </td></tr></table></div></div></div></div><div id="footer"><div class="copyright">Copyright © 2010-2011 Giacomo Tesio</div></div><script type="text/javascript">SyntaxHighlighter.all()</script></body></html>
