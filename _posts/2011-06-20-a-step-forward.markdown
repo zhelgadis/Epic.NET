@@ -12,11 +12,12 @@ Epic.Core
 The Epic.Core project includes the entry point of Epic-based application: 
 the [IEnterprise][1], that manages the livecycle of the users' 
 [IWorkingSession][2].
-Through the working session a user can achieve or leave the allowed [roles][3], 
-that provide access to a set of repositories, domain services, responsibility 
-and tools, just like all real roles in any real enterprise.
+Through the working session a user can achieve or leave his [roles][3]. 
+Each role is a hat that provides access to a set of repositories, domain 
+services, responsibility and tools, just like all real roles in any real 
+enterprise's organization.
 
-All the code released is documented and features a full coverage from unit 
+All the code released is well documented and features a full coverage from unit 
 tests.
 
 Documentation
@@ -33,8 +34,8 @@ but they’re only part of the story, and eventually all non-trivial frameworks
 require good documentation that provides an overall vision.
 
 The Epic's target audience are high-skilled developers facing complex 
-corporate requirements that can not lose time looking for help or insights: 
-they just want to get the job done and move on.
+corporate requirements that can not lose their time looking for help or 
+insights: they just want to get the job done and move on.
 
 Moreover Epic is more than a C# library: it is a conceptual framework that was 
 born out of some years in domain-driven development, with many errors and a 
@@ -51,7 +52,7 @@ Such consideration lead me to docbook. I'm fluent with XML and XSL and I used
 Docbook before (in previous live, when I was a pure Debianist :-D) but I asked 
 myself: what about the other contributors? Docbook is a typical unix tool but
 no other windows developer that I know would write more than two page in 
-docbook. They would find it convolute.
+docbook. They would find it convoluted.
 
 Then I've found [Asciidoc][4], a funny python script that translates a simple
 textual markup into either HTML or Docbook. It was the _deus ex machina_ that I
@@ -59,8 +60,8 @@ needed: it is easy to write and to read (even easier than a wiki), it can
 easily produce HTML for windows users and Docbook for linuxers, so that I can
 use my Debian box to build the manual in all the format that I need.
 
-Once I defined the toolchain, I wrote the first part of the manual, describing
-the patterns and practices that Epic advises.
+Once I defined the toolchain, I wrote [the first part of the manual][5], 
+describing the patterns and practices that Epic advises.
 
 **All comments and feedback are very welcome.**
 
@@ -70,3 +71,4 @@ Note that I'm not a native English speaker: feel free to show me the mistakes!
 [2]: https://github.com/Shamar/Epic.NET/blob/v0.2.0/Code/Epic.Core/IWorkingSession.cs "A user working session."
 [3]: http://epic.tesio.it/doc/bounded_roles.html "Bounded Roles"
 [4]: http://www.methods.co.nz/asciidoc/ "AsciiDoc - Text based document generation"
+[5]: http://epic.tesio.it/doc/nothing_but_business.html "Epic's manual"
