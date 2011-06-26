@@ -8,7 +8,7 @@ title: Development log
 Follow the Epic development on the <a href="atom.xml" title="Development feed">development feed</a>.
 </div>
 
-<ul class="posts">
+<ul class="posts" style="clear:left">
 {% for post in site.posts %}
   <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
 {% endfor %}
