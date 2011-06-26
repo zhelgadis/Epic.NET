@@ -3,6 +3,11 @@ layout: default
 title: Development log
 ---
 
+<div style="display: block">
+<a href="atom.xml" title="Development feed" style="float:left"><img border="0" src="feed.png" /></a>
+Follow the Epic development on the <a href="atom.xml" title="Development feed">development feed</a>.
+</div>
+
 <ul class="posts">
 {% for post in site.posts %}
   <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
