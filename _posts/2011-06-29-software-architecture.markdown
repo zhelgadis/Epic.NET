@@ -87,7 +87,7 @@ between the members of the team. Moreover each decision given from such a team
 requirements) is based on the different points of view and on the 
 different experiences and thus it has more chances to be the right one.
 
-**Synthesis** is a key world in architecture.
+**Synthesis** is a keyword in architecture.
 
 But what about Epic?
 --------------------
