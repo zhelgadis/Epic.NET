@@ -78,7 +78,7 @@ human being.
 Indeed, our artifacts are complex and they move all the time! And we are also 
 required to be able to change them rapidly and smoothly!
 
-Thus I'm a fan of architectural teams, without any _princeps inte pares_: 
+Thus I'm a fan of architectural teams, without any _princeps inter pares_: 
 architects should be forced to **always** reach a **shared decision**.
 
 This might seem inefficient at first, but soon lead to a high level of trust
