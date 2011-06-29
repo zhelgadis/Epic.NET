@@ -22,7 +22,7 @@ A generic definition
 My own definition is a bit [generic][2] (and has been changed thanks to the 
 others' ones):
 
-**Architecture**: The structure given to an artifact, to meet **all** the paid 
+**Architecture** is the structure given to an artifact, to meet **all** the paid 
 requirements.
 
 The type of the artifact has to be related to the software, but it can be more 
