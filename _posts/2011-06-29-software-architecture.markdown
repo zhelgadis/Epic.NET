@@ -34,7 +34,7 @@ replaced once the artifact has been built: it is important to get it right early
 
 Thus, architects have to be experienced "hands on" [developers][3], able to 
 debug and understand almost any piece of code rapidly, moving smoothly between 
-layers, tiers and tecnologies.  
+layers, tiers and technologies.  
 Such qualities, even if rare, are still not enough.
 
 Indeed, to my money, software architects need a deep experience to be able to 
@@ -94,7 +94,7 @@ But what about Epic?
 How all this is related to Epic?
 
 Well, first of all I recently wrote [a chapter][5] of the Epic's manual 
-describing the Epic's architecture.
+describing its own architecture.
 
 Second, the meeting made me to consider how such architecture fit a specific
 set of requirements but not others.
