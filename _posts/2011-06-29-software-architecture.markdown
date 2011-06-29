@@ -81,9 +81,10 @@ required to be able to change them rapidly and smoothly!
 Thus I'm a fan of architectural teams, without any _princeps inter pares_: 
 architects should be forced to **always** reach a **shared decision**.
 
-This might seem inefficient at first, but soon lead to a high level of trust
-between the member of the team. Moreover each decision given from such a team
-(two people are enough) is based on the different points of view and on the 
+This might seem inefficient at first, but it leads soon to a high level of trust
+between the members of the team. Moreover each decision given from such a team
+(two people could be enough, it depends on the complexity of the artifact's 
+requirements) is based on the different points of view and on the 
 different experiences and thus it has more chances to be the right one.
 
 **Synthesis** is a key world in architecture.
