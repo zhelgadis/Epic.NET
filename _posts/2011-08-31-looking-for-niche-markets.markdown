@@ -38,26 +38,26 @@ agreed that nothing similar is present in the market.
 However, they stated, it was "way too ambitious".
 
 Most of frameworks out of there try to simplify the developer's work with 
-general purpose tools. Epic don't. It has been designed to meet the needs of 
+general purpose tools. Epic doesn't. It has been designed to meet the needs of 
 a small market of corporate applications with complex business rules.
 
 Time per complexity
 -------------------
-To better explain what I mean, lets suppose that we can measure the minimal 
+To better explain what I mean, let's suppose that we can measure the minimal 
 complexity of a software development project. I do not mean simply a measure of
-the ciclomatic complexity of the running application, but a qualitative evaluation 
-that take into account the complexity of the project too, it's history 
+the cyclomatic complexity of the running application, but a qualitative evaluation 
+that takes into account the complexity of the project too, its history 
 and evolution, the changes in the requirements, the refactoring breakthrough
 and so on.
 
 Now consider some different development techniques that you have tried in your 
 life.
 
-Can you remember how was easy to develop small applications with your brandnew 
-VB6 RAD tool? Can you remember how was easy to develop a simple ecommerce with, 
+Can you remember how easy was to develop small applications with your brandnew 
+VB6 RAD tool? Can you remember how easy was to develop a simple ecommerce with, 
 say, Ruby on Rails?
 
-However you can remember what happen that time, when the customer 
+However you can remember what happened that time, when the customer 
 required a small change, than another one, and finally you had to rewrite the
 application from scratch (and the customer got a new application full of 
 untested bugs).
@@ -70,7 +70,7 @@ Service Oriented Architectures.
 SOA were cool but you started to see how they can overwhelm some applications,
 that were cheaper to be written in the previous methodology.
 
-Even if the example is quite dumb, you've get the point.
+Even if the example is quite dumb, you get the point.
 
 Now, imagine that you can draw a graph with the minimal complexity of a project
 on the abscissa and the time required to complete the project with each 
@@ -89,7 +89,7 @@ the previous ones.
 
 ![Time required per project complexity qualitative graph](/imgs/posts/2011-08-31-time-complexity.png "Time required per project complexity qualitative graph")
 
-Epic could scare many teams becouse it has a slow, steady learning curve and the 
+Epic could scare many teams becouse it has a slow, steep learning curve and the 
 development will require a deep understanding of the domain before that the 
 architecture itself can be defined. Long brainstorming sessions with the domain 
 expert are required and only after that the model has been written and tested, 
@@ -98,7 +98,7 @@ you can define the technological aspects of the application.
 Thus the shape of the curve drawn from Epic on the time/complexity graph 
 is quite different from the others. It's far too expensive if your customer just 
 needs to write and read a SQL database. However if the complexity is high 
-enough, it's the cheaper approach you can adopt (IMHO the DDD curve would be 
+enough, it's the cheapest approach you can adopt (IMHO the DDD curve would be 
 similar, but this is quite debated... to my money, a man with an hammer should 
 be able to estimate nails).
 
