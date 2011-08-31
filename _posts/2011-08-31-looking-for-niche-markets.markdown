@@ -8,18 +8,18 @@ I'm building a framework that few teams all over the world will adopt.
 
 This will happens for many reasons:
 
-1. 95 to 97 percent of the corporate softwares of the "primero mundo" (like my 
-   brazilians friends call the rich occident and in crisis) have already be 
-   written without it
-2. big giants like Microsoft, Oracle and IBM need to rise the complexity of 
-   software development to sell their products and services
-3. the framework requires a deep understanding of object oriented programming
-   (that despite the hype, isn't yet mainstream)
-4. the framework requires a deep understanding of domain-driven design "as in 
-   the book" (indeed many people are moving from the original methodology to
-   others that focus on development details instead of the creative 
-   collaboration with a domain expert) 
-5. Epic.NET scares
+* 95 to 97 percent of the corporate softwares of the "primero mundo" (like my 
+  brazilians friends call the rich occident and in crisis) have already be 
+  written without it
+* big giants like Microsoft, Oracle and IBM need to rise the complexity of 
+  software development to sell their products and services
+* the framework requires a deep understanding of object oriented programming
+  (that despite the hype, isn't yet mainstream)
+* the framework requires a deep understanding of domain-driven design "as in 
+  the book" (indeed many people are moving from the original methodology to
+  others that focus on development details instead of the creative 
+  collaboration with a domain expert) 
+* Epic.NET scares
 
 I ideated Epic.NET after some year of experience in the development of 
 frameworks for the finance sector of the company I'm working on. 
@@ -38,8 +38,8 @@ agreed that nothing similar is present in the market.
 However, they stated, it was "way too ambitious".
 
 Most of frameworks out of there try to simplify the developer's work with 
-general purpose tools. Epic doesn't. It has been designed to meet the needs of 
-a few corporate applications with complex business rules.
+general purpose tools. Epic [doesn't][do-not-protect]. It has been designed to 
+meet the needs of a few corporate applications with complex business rules.
 
 Time per complexity
 -------------------
@@ -90,8 +90,8 @@ the previous ones.
 ![Time required per project complexity qualitative graph](/imgs/posts/2011-08-31-time-complexity.png "Time required per project complexity qualitative graph")
 
 Epic could scare many teams becouse it has a slow, steep learning curve and the 
-development will require a deep understanding of the domain before that the 
-architecture itself can be defined. Long brainstorming sessions with the domain 
+development will require a deep understanding of the domain [before that the 
+architecture itself can be defined][bellis]. Long brainstorming sessions with the domain 
 expert are required and only after that the model has been written and tested, 
 you can define the technological aspects of the application.
 
@@ -104,7 +104,6 @@ be able to estimate nails).
 
 Where is the corner point?
 --------------------------
-
 Hard to say. Epic does not even exist! (yet... :-D)
 
 I can say that the smaller application that we have built with the Epic's 
@@ -120,5 +119,5 @@ However the Epic framework targets a niche markets of applications that have an
 high percieved value from the customer point of view (tipically used for their 
 core business), complex domains and challenging technological requirements.
 
-
-
+[bellis]: http://epic.tesio.it/doc/the_bellis_perennis.html
+[do-not-protect]: http://davybrion.com/blog/2009/04/educate-developers-instead-of-protecting-them/ "Educate Developers Instead Of Protecting Them"
