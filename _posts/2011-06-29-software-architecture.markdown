@@ -3,12 +3,12 @@ layout: post
 title: Software Architecture
 ---
 Today I had an interesting meeting with five other different software 
-architects. It was the first of a series of meeting devoted to share the 
+[architects][6]. It was the first of a series of meeting devoted to share the 
 different architectural solutions developed in the different teams of our 
 company.
 
 Since it was an introductory session, I asked the others how they define the
-software architecture (and thus the role of software architect).
+[software architecture][7] (and thus the role of software architect).
 
 As expected, the definitions were quite different (it is still debated all over
 the world, and many architects hate the term), but no one defined the architect
@@ -22,8 +22,8 @@ A generic definition
 My own definition is a bit [generic][2] (and has been changed thanks to the 
 others' ones):
 
-**Architecture** is the structure given to an artifact, to meet **all** the paid 
-requirements.
+> **Architecture** is the structure given to an artifact, to meet **all** the 
+> paid requirements.
 
 The type of the artifact has to be related to the software, but it can be more 
 than code design or tools' selection, as an efficient development process for 
@@ -99,9 +99,16 @@ describing its own architecture.
 Second, the meeting made me to consider how such architecture fit a specific
 set of requirements but not others.
 
+Finally the people involved in the meeting have inspired in various ways the 
+ideation of Epic. One of them also developed with me the architectural vision 
+behind Epic.Poem (the presentation layer of Epic).  
+Thus, if ever Epic will see the light of day, part of the merit will be of 
+theirs.
 
 [1]: http://blogs.tedneward.com/2007/09/20/Hard+Questions+About+Architects.aspx "Hard Questions About Architects"
 [2]: http://en.wikipedia.org/wiki/Generic_programming "Generic programming"
 [3]: http://reprog.wordpress.com/2010/03/21/the-hacker-the-architect-and-the-superhero-three-completely-different-ways-to-be-an-excellent-programmer/ "The hacker, the architect and the superhero: three completely different ways to be an excellent programmer"
 [4]: http://www.tesio.it/2010/09/leadership-and-responsibility.html "Leadership and Responsibility"
 [5]: http://epic.tesio.it/doc/the_bellis_perennis.html "The bellis perennis"
+[6]: http://martinfowler.com/ieeeSoftware/whoNeedsArchitect.pdf "Who needs an architect?"
+[7]: http://www.ics.uci.edu/~fielding/pubs/dissertation/software_arch.htm "Software Architecture by Roy T. Fielding"
