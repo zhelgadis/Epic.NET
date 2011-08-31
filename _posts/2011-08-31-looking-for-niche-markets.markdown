@@ -43,10 +43,10 @@ a small market of corporate applications with complex business rules.
 
 Time per complexity
 -------------------
-To better explain what I mean lets suppose that we can measure the minimal 
+To better explain what I mean, lets suppose that we can measure the minimal 
 complexity of a software development project. I do not mean simply a measure of
-the ciclomatic complexity of the running application a qualitative evaluation 
-that take into account also the complexity of the project, it's history 
+the ciclomatic complexity of the running application, but a qualitative evaluation 
+that take into account the complexity of the project too, it's history 
 and evolution, the changes in the requirements, the refactoring breakthrough
 and so on.
 
@@ -55,14 +55,14 @@ life.
 
 Can you remember how was easy to develop small applications with your brandnew 
 VB6 RAD tool? Can you remember how was easy to develop a simple ecommerce with, 
-say, Ruby on Rais?
+say, Ruby on Rails?
 
-However you can remember for sure what happen that time, when the customer 
+However you can remember what happen that time, when the customer 
 required a small change, than another one, and finally you had to rewrite the
 application from scratch (and the customer got a new application full of 
 untested bugs).
 
-So you got a team and moved to N-Tiers applications. Your new customer was 
+So you've get a team and moved to N-Tiers applications. Your new customer was 
 so satisfied of your work that payed another application and another one again. 
 Then he asked to make them comunicate. And you had to learn about 
 Service Oriented Architectures.
@@ -73,11 +73,11 @@ that were cheaper to be written in the previous methodology.
 Even if the example is quite dumb, you've get the point.
 
 Now, imagine that you can draw a graph with the minimal complexity of a project
-on the abscissa and the time required to complete a project with each 
+on the abscissa and the time required to complete the project with each 
 methodology on the ordinate.
 
 Each methodology would draw different curves (and such curves would change 
-together from team to team).The lower is the curve, the cheaper is the 
+together from team to team). The lower is the curve, the cheaper is the 
 development. In our story, each methodology requires higher skill from the 
 previous one. 
 
@@ -86,6 +86,8 @@ small increase of complexity will require a lot more time to invest.
 At some point N-Tiers based applications win. However again after some point
 the complexity require another approach and the SOAs become cheaper then all 
 the previous ones.
+
+![Time required per project complexity qualitative graph](/imgs/posts/2011-08-31-time-complexity.png "Time required per project complexity qualitative graph")
 
 Epic could scare many teams becouse it has a slow, steady learning curve and the 
 development will require a deep understanding of the domain before that the 
@@ -100,8 +102,6 @@ enough, it's the cheaper approach you can adopt (IMHO the DDD curve would be
 similar, but this is quite debated... to my money, a man with an hammer should 
 be able to estimate nails).
 
-![Time required per project complexity qualitative graph](/imgs/posts/2011-08-31-time-complexity.png "Time required per project complexity qualitative graph")
-
 Where is the corner point?
 --------------------------
 
@@ -114,7 +114,7 @@ we have been able to meet the requirements of three other customers in a week
 each (this have been possible since we got the model right at first and the 
 customers simply asked for different UIs/services).
 
-My hope is that Epic will halve the effort required (once learned).
+My hope is that Epic will halve the effort required.
 
 However the Epic framework targets a niche markets of applications that have an 
 high percieved value from the customer point of view (tipically used for their 
