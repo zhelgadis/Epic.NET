@@ -39,7 +39,7 @@ However, they stated, it was "way too ambitious".
 
 Most of frameworks out of there try to simplify the developer's work with 
 general purpose tools. Epic doesn't. It has been designed to meet the needs of 
-a small market of corporate applications with complex business rules.
+a few corporate applications with complex business rules.
 
 Time per complexity
 -------------------
