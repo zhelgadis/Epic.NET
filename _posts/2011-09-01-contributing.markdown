@@ -43,7 +43,7 @@ As for version control we adopt this general rules:
 * **A single development branch should represent changes related to a single 
   issue.** If you decide to work on another issue, create another branch.
 * **Send pull requests from the branch to devel.** Your request will be 
-  commented, discussed and will hopefully merged in the codebase.
+  commented, discussed and hopefully it will be merged in the codebase.
 * **Update your devel branch as needed.** Once your request has been accepted
   you can update the devel branch.
   
@@ -83,10 +83,18 @@ contributions and have the same rights to use or license the contributions
 which you would have had without entering into [the agreement][11] (except for 
 assigning exclusive licenses).
 
-You will only need to sign the agreement once; it will apply to 
+Note that you will only need to sign the agreement once; it will apply to 
 all stuff that you send us. However, if you will not sign the agreement, we 
 will not be able to accept any contribute of yours.
 
+A piece of glory
+----------------
+As a contributor of Epic.NET, you will be listed in the credits' page.
+
+If you desire, your name will be linked to any of [URI][12] that concerns you 
+(be it your website, your blog, your linkedin account and so on).
+
+This might be not a big reward for your work, just a way to show our gratitude.
 
 
 [1]: https://groups.google.com/group/epic-net/ "Epic's mailing list"
@@ -100,3 +108,4 @@ will not be able to accept any contribute of yours.
 [9]: http://www.vatican.va/holy_father/benedict_xvi/speeches/2011/august/documents/hf_ben-xvi_spe_20110818_intervista-madrid_en.html "Ethics should guide economics"
 [10]: http://www.gnu.org/philosophy/selling-exceptions.html "Stallman on selling exceptions." 
 [11]: http://www.fsf.org/blogs/rms/assigning-copyright "How our agreement will work."
+[12]: http://tools.ietf.org/rfc/rfc3986.txt
