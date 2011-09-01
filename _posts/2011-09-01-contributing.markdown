@@ -74,14 +74,15 @@ based on [selling exceptions][10] for **specific** applications.
 In this way, we hope to keep the project both free and alive.
 
 Soon I'll write about the reasons that made me release Epic under the 
-[GNU Affero General Public License][8], has I realized recently that such decision 
-has some point of interess.
+[GNU Affero General Public License][8], since I recently realized that such 
+decision is of some interest.
 
 BTW, you will retain ownership of the copyright and patent claims in your 
 contributions and have the same rights to use or license the contributions 
-which you would have had without entering into the agreement (except for assigning exclusive licenses).
+which you would have had without entering into the agreement (except for 
+assigning exclusive licenses).
 
-You only need to sign the contributor license agreement once; it applies to 
+You will only need to sign the agreement once; it applies to 
 all stuff that you send us. However, if you will not sign the agreement, we 
 will not be able to accept any contribute of yours.
 
