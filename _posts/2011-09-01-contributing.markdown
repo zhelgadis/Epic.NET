@@ -1,11 +1,12 @@
 ---
 layout: post
-title: Join us
+title: How to contribute?
 ---
 Epic is very complex. We need talented programmers with real world
 experience and high technical skills to complete the journey.
 
-However we need a long term strategy to keep the project's management fluent and to avoid unnecessary waste of time.
+However we need a long term strategy to keep the project's management fluent 
+and to avoid unnecessary waste of time.
 
 Thus, if you like to contribute to Epic here you can find some advice on how to
 set up your environment rapidly.
@@ -79,10 +80,10 @@ decision is of some interest.
 
 BTW, you will retain ownership of the copyright and patent claims in your 
 contributions and have the same rights to use or license the contributions 
-which you would have had without entering into the agreement (except for 
+which you would have had without entering into [the agreement][11] (except for 
 assigning exclusive licenses).
 
-You will only need to sign the agreement once; it applies to 
+You will only need to sign the agreement once; it will apply to 
 all stuff that you send us. However, if you will not sign the agreement, we 
 will not be able to accept any contribute of yours.
 
@@ -97,4 +98,5 @@ will not be able to accept any contribute of yours.
 [7]: http://progit.org/book/ch3-6.html
 [8]: http://epic.tesio.it/license.html
 [9]: http://www.vatican.va/holy_father/benedict_xvi/speeches/2011/august/documents/hf_ben-xvi_spe_20110818_intervista-madrid_en.html "Ethics should guide economics"
-[10]: http://www.fsf.org/blogs/rms/assigning-copyright "Stallman on linking exceptions."
+[10]: http://www.gnu.org/philosophy/selling-exceptions.html "Stallman on selling exceptions." 
+[11]: http://www.fsf.org/blogs/rms/assigning-copyright "How our agreement will work."
