@@ -18,7 +18,7 @@ Of course, all the material produced for the conference will be also available h
 
 See you soon!
 
-<div style="text-align:center:">
+<div style="text-align:center;">
     <img src="http://www.ddd-day.it/Themes/ddd-day/Content/images/logo.png" title="DDD Day - 8 october 2011 - Bologne - Hotel Sheraton" /><br/>
     <img src="http://www.ddd-day.it/Themes/ddd-day/Content/images/ddd.png" title="DDD Day"/>
 </div>
