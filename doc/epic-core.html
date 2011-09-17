@@ -30,7 +30,7 @@ Strong D.M. &amp; Volkoff O.
 <em class="citetitle">A roadmap for enterprise system implementation (2004)</em>
 </span></td></tr></table></div><p>At the core of the Epic framework there is a model of the corporate that uses
 the software. It’s a quite simple model, a generic one, that describes a well
-defined context: the corporate organization.</p><p>Indeed, our applications target the core business of our customers.
+defined context: the corporate daily life.</p><p>Indeed, our applications target the core business of our customers.
 The way each user approaches the application depends on the roles he plays in
 the organization.
 It is not simply a matter of access control and security, every instance of
@@ -39,7 +39,7 @@ people will have different kind of tasks to execute.</p><p>Such models are conta
 you find a set of interfaces and abstract classes that leaves you all the
 flexibility you could need but it still imposes some important invariants
 that could be missed during the development.</p><div class="section" title="The company, first"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_the_company_first"></a>The company, first</h2></div></div></div><p>The first entity we encounter while working with Epic is the
-<a class="ulink" href="https://github.com/Shamar/Epic.NET/blob/devel/Code/Epic.Core/Enterprise.cs" target="_top">enterprise</a>.
+<a class="ulink" href="https://github.com/Shamar/Epic.NET/blob/devel/Code/Epic.Core/Enterprise.cs" target="_top">Enterprise</a>.
 It’s a singleton, a static class that must be initialized before use.</p><p>In the initialization we have to provide an implementation of the abstract class
 <a class="ulink" href="https://github.com/Shamar/Epic.NET/blob/devel/Code/Epic.Core/EnterpriseBase.cs" target="_top">EnterpriseBase</a>.
 Such implementation will be tailored to the concrete application that
@@ -49,8 +49,8 @@ and to the
 <a class="ulink" href="https://github.com/Shamar/Epic.NET/blob/devel/Code/Epic.Core/IOrganization.cs" target="_top">corporate organization</a>.</p><p>The abstract methods <code class="literal">RetrieveEnvironmentInstance()</code> and
 <code class="literal">RetrieveEnterpriseInstance()</code> are not simple factories: they incapsulate both
 the knowledge of the right types to use, their initialization techniques and
-their livecycle.</p><p>Being a static class coupled with <code class="literal">ApplicationBase</code>, Application is the trick to
-get things right down to roles, since you can’t avoid to implement use the base
+their livecycle.</p><p>Being a static class coupled with <code class="literal">EnterpriseBase</code>, <code class="literal">Enterprise</code> is the trick to
+doing things properly down to roles, since you have to use the base
 classes provided, with all the connected long term benefit.</p></div><div class="section" title="The environment"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_the_environment"></a>The environment</h2></div></div></div><p>Each company operates in an environment.
 From the company point of view, such an environment (physical, social
 and economic) provides a range of services beyond its core business,
