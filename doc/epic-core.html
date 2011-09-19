@@ -34,8 +34,8 @@ defined context: the corporate daily life.</p><p>Indeed, our applications target
 The way each user approaches the application depends on the roles he plays in
 the organization.
 It is not simply a matter of access control and security, every instance of
-the software run under the responsibility of a specific person, and different
-people will have different kind of tasks to execute.</p><p>Such models are contained in the Epic.Core assembly: under the <code class="literal">Epic</code> namespace
+the software runs under the responsibility of a specific person, and different
+people will have different kinds of tasks to execute.</p><p>Such models are contained in the Epic.Core assembly: under the <code class="literal">Epic</code> namespace
 you find a set of interfaces and abstract classes that leaves you all the
 flexibility you could need but forcing important invariants
 that could be missed during the development.</p><div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Note"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Note]" src="images/note.png" /></td><th align="left"></th></tr><tr><td align="left" valign="top"><p>This chapter is still under development. Please
@@ -81,10 +81,10 @@ and begin to achieve their roles.</p><p>The abstract class
 helps with the implementation of
 the <code class="literal">IOrganization</code> interface, providing a set of template methods to handle
 working sessions lifetime.</p></div><div class="section" title="Yet another working day!"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_yet_another_working_day"></a>Yet another working day!</h2></div></div></div><p>To design <code class="literal">IWorkingSession</code> we analyzed a tipical working day in a
-succesfull company. Each day a lot of smart people enter in the company and they
-start their own tasks. Each person has specific responsibility and roles.
-Each role provide access to a set of resource and services that are required
-for to complete a set of tasks. Most resources require exclusive control for
+successful company. Each day a lot of smart people enter in the company and
+start their own tasks. Each person has specific responsibilities and roles.
+Each role provides access to a set of resource and services that are required
+to complete a set of tasks. Most resources require exclusive control for
 an amount of time (did you say "the bathroom"?) but a few (hopefully very few)
 require concurrent access and realtime synchronization.</p><p><a class="ulink" href="https://github.com/Shamar/Epic.NET/blob/devel/Code/Epic.Core/Organization/WorkingSessionBase.cs" target="_top">WorkingSessionBase</a>
 is the base class to extend for describing working sessions.
@@ -96,6 +96,6 @@ is an abstract class that can not be derived directly, but through
 <a class="ulink" href="https://github.com/Shamar/Epic.NET/blob/devel/Code/Epic.Core/Organization/RoleBuilderBase.cs" target="_top">RoleBuilderBase</a>.
 These two classes enforce a controversial rule: the clients must use the roles
 through pure interfaces designed without any constraint, but all concrete
-role must derive <code class="literal">RoleBase</code>, that is an abstract class serializable and
+roles must derive <code class="literal">RoleBase</code>, that is an abstract class serializable and
 disposable. Indeed roles' serialization and their disposition will be
 required from the framework, as we will see in Epic.Poem.</p></div></div><div class="navfooter"><hr /><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="the_bellis_perennis.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="the_bellis_perennis.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="epic-linq.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Part II. The bellis perennis </td><td width="20%" align="center"><a accesskey="h" href="manual.html">Table of Contents</a></td><td width="40%" align="right" valign="top"> Chapter 10. Epic.Linq</td></tr></table></div></div></div></div><div id="footer"><div class="copyright">Copyright © 2010-2011 Giacomo Tesio</div></div><script type="text/javascript">SyntaxHighlighter.all()</script></body></html>
