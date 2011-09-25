@@ -23,7 +23,7 @@ Indeed the Epic's cost has been estimated to around 400.000 euros
 (of which I almost invested one-tenth till now). I have to keep the 
 governance model cheap to concentrate on development.
 
-This should not to discourage contributors: I value synthesis a lot and I hate 
+This should not discourage contributors: I value synthesis a lot and I hate 
 to leave a debate before a global consensus has been reached.
 Generally speaking, I never impose my own opinion (but I'm quite good to argue).
 
@@ -49,7 +49,7 @@ However I'm quite different from Linus Torvalds and Epic is not an operative
 system. Thus I choosed the GNU Affero General Public License to give the
 strongest freedom to the end users and to avoid the SaaS loophole.
 
-AGPLv3. indeed, imposes that any application based on Epic.NET will have to be 
+AGPLv3, indeed, imposes that any application based on Epic.NET will have to be 
 available for downloads to all end users as source code (even if it is used 
 as a service) and such users will be free to redistribute it. 
 Such license leaves me the option to sell linking exceptions to developers of 
