@@ -53,15 +53,16 @@ As for version control we adopt this general rules:
 2. Clone to computer (`$ git clone git@github.com:you/Epic.NET.git`)
 3. Don’t forget to cd into your repo: (`$ cd Epic.NET/`)
 4. Set up remote upstream (`$ git remote add upstream git://github.com/Shamar/Epic.NET.git`)
-5. Create a branch for the activity (`$ git checkout -b 123-class-rename`, if you don’t have a bug report no worries just skip the number)
-6. Develop on your brandnew branch. _[Time passes, the main Epic.NET repository accumulates new commits]_
-7. Commit changes to issue branch. (`$ git add . ; git commit -m 'commit message'`)
-8. Fetch upstream (`$ git fetch upstream`)
-9. Update local devel (`$ git checkout devel; git pull upstream devel`)
-10. Repeat steps 5-8 till development is complete
-11. [rebase][7] issue branch (`$ git checkout 123-class-rename; git rebase devel`)
-12. Push branch to GitHub (`$ git push origin 123-class-rename`)
-13. Issue pull request (Click Pull Request button)
+5. Be sure to be in devel (`$ git checkout devel`)
+6. Create a branch for the activity (`$ git checkout -b 123-class-rename`, if you don’t have a bug report no worries just skip the number)
+7. Develop on your brandnew branch. _[Time passes, the main Epic.NET repository accumulates new commits]_
+8. Commit changes to issue branch. (`$ git add . ; git commit -m 'commit message'`)
+9. Fetch upstream (`$ git fetch upstream`)
+10. Update local devel (`$ git checkout devel; git pull upstream devel`)
+11. Repeat steps 5-8 till development is complete
+12. [rebase][7] issue branch (`$ git checkout 123-class-rename; git rebase devel`)
+13. Push branch to GitHub (`$ git push origin 123-class-rename`)
+14. Issue pull request (Click Pull Request button)
 
 During rebase you may need to resolve conflicts that occur when a file on the 
 development trunk and one of your files have both been changed. 
@@ -69,7 +70,8 @@ development trunk and one of your files have both been changed.
 
 Just before you pull
 --------------------
-We will require that you sign a Contributor Agreement (still under definition). 
+We will require that you sign the [Fiduciary License Agreement][fla] 
+(instructions [here][fla2]). 
 Indeed, we are planning to develop a sustainable (yet [ethic][9]) business model 
 based on [selling exceptions][10] for **specific** applications. 
 In this way, we hope to keep the project both free and alive.
@@ -109,3 +111,5 @@ This might be not a big reward for your work, just a way to show our gratitude.
 [10]: http://www.gnu.org/philosophy/selling-exceptions.html "Stallman on selling exceptions." 
 [11]: http://www.fsf.org/blogs/rms/assigning-copyright "How our agreement will work."
 [12]: http://tools.ietf.org/rfc/rfc3986.txt
+[fla]: http://epic.tesio.it/doc/FLA.pdf
+[fla2]: http://epic.tesio.it/2011/09/25/governance-and-copyright.html#license_agreements
