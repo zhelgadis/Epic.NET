@@ -19,7 +19,7 @@ For the purpose of this project, I'm a dictator. A [benevolent][bd] one, I hope.
 This is the simplest governance model I can design that meet the requirements
 of Epic.NET without an overwhelming effort to be maintained.
 
-Indeed the Epic's cost has been estimated to around 400.000 euros 
+Indeed the Epic's cost has been estimated to around 400,000 euros 
 (of which I almost invested one-tenth till now). I have to keep the 
 governance model cheap to concentrate on development.
 
@@ -56,7 +56,7 @@ Such license leaves me the option to sell linking exceptions to developers of
 proprietary software that would pay for the productivity boost that the 
 framework provides.
 
-This is not an option: only Silvio Berlusconi could give away 400.000 euros 
+This is not an option: only Silvio Berlusconi could give away 400,000 euros 
 without any plan to return over the investment! :-D
 
 License Agreements
@@ -92,8 +92,8 @@ you could write something like:
 > (at the time of this writing, github.com/Shamar/Epic.NET) by beneﬁciary under 
 > the account name *YourUsernameHere* on or before the date of this document.
 
-(Note however, that such statement, will make you sigh a the FLA again if you
-change your username or send any patch via mail) 
+(Note however, that such statement, will impose that you sigh a the FLA 
+again if you change your username or send any patch via mail) 
 
 Finally, on page 5, put the city where you are, the date, and sign it, then 
 send one or two copies to me via post (the address is in the contract).
@@ -104,8 +104,8 @@ since most open source projects reside in the states, and european developers
 like me could learn a lot from talking with an expert lawyer on the matter.
 However, I've no such time, now.
 
-Why you should contribute?
---------------------------
+Why should I contribute?
+------------------------
 To my money, you should contribute to Epic.NET if 
 
 1. you need it ready for production as soon as possible
@@ -120,10 +120,11 @@ we will find a way to reward contributors (probably by hiring the best ones).
 As for companies, those who will pay developers to work with us for 
 a significant amount of code, will have a 33% discount over
 the commercial license (consider that we are planning to sell linking 
-exceptions for 30000 euros each).
+exceptions for 30,000 euros each).
 
 Note however that being a very challenging project, it's an high risk 
 investment. **It could fail**. 
+
 Developers that invest their own precious time in Epic should ponder this 
 carefully. I always do.
 
