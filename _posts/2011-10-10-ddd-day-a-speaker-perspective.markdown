@@ -27,7 +27,7 @@ Alberto Brandolin is a trainer and a coach with an evident, huge experience in
 many different development teams. My colleagues agree with me that he told us 
 many things that we learnt in the hard way.
 It's so true that I could state that his session could be a pre-requisite to 
-understand Epic even if he had never talked about it.
+really understand Epic even if we have never talked about it.
 
 As to me, I'm just an architect in a [software house][ors] that aims to build
 high quality software **products** with an high degree of customizability.
@@ -70,8 +70,6 @@ Alberto to evaluate the risks and opportunities.
 While I think that no money comes without risks, I still see a lot of 
 (exciting) research in the field. Indeed what I listened gave me more 
 questions than answers.
-
-It looks like OOP: many people use the term, few really do it.  
 
 [ddd-day]: http://ddd-day.it/
 [manual]: http://epic.tesio.it/doc/manual.html
