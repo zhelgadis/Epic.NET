@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Epic.NET - Processes, patterns and architectures
+title: DDD Day, the smartest question
 ---
 Saturday, during the latest Greg's session, [Arialdo Martini][arialdo] asked a 
 very smart question.
 
-> Why should the domain expert explain to me the problem?
-> He's an expert! He should explain me the solution!
+> Why should the domain expert explain to me the problem?  
+> He's an expert! He should explain to me the solution!
 
 When I tried to answer (very rapidly) I noted that I wasn't able to explain my 
 point of view with the depth that the question required.
@@ -79,7 +79,7 @@ If I can remember, in my answer to Arialdo, I cited functional programming.
 
 Functional programming lead you to describe the problem, instead of the solution.
 If you know Haskell or Lisp you know what I mean.
-(I also cited HTML and XML, but it was confusing, I should have cited XSLT!)
+(I also cited HTML and XML, but it was confusing, I should have cite XSLT!)
 
 However the point is not the programming paradigm you adopt.
 
@@ -103,7 +103,8 @@ However, even without Epic, we found very useful
 to build declarative domain models. Even if they are coupled with a technology
 that you master, they still keep your understanding of the problem inside.
 Reading it later you will be able to understand why you did things in that way
-(if you document design decisions taken to workaround technological limitation).
+(if you document the design decisions taken to workaround technological 
+limitations).
 
 
 [arialdo]: http://arialdomartini.wordpress.com/
