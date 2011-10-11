@@ -8,11 +8,11 @@ saturday, at Bologna on [DDD-Day][ddd-day].
 During the session I omitted most of Epic's patterns as they are already
 documented in the [manual][manual].
 
-Morover I've integrated the feedbacks I recieved via mail (and I tried to 
-clarify what the audience asked).
+Moreover I've integrated the feedbacks I recieved via mail (and I tried to 
+clarify a bit what the audience asked).
 
-They are not modern [BBP][bbp] slides, but they serve the purpose to spread my
-experience in DDD as much as possible. 
+They are not modern [BBP][bbp] slides, but they serve the purpose to describe
+my experience in DDD as much as possible. 
 
 Please help me to make them better!
 

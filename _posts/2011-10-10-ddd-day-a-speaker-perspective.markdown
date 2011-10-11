@@ -13,7 +13,7 @@ Indeed, as a DDD pratictioner, I noted that our experience almost overlaps
 That's quite interesting to me: this means that despite the seven years after
 the blue book, DDD is still a research field. We still need to dwelve into the
 language we use to describe principles and processes, a language that can drive
-our choose.
+our decisions.
 
 The devil in the details
 ------------------------
