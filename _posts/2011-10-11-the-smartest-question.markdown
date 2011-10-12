@@ -41,7 +41,7 @@ Once you know why he needs you, you have to understand how to help him.
 That's where a domain model can help. 
 
 We are developers, focused on scalability issues, nasty networking problems and 
-the so. We are so good with this complex things that we loose the simple reason 
+the so. We are so good with these complex things that we loose the simple reason 
 why we do them. At the end of the day, it's just a matter of making life easier 
 to someone. 
 According to who is the beneficiary, our work helps the goods or the evils. 
@@ -90,11 +90,11 @@ In other words, [complex problems are simple solutions behind misunderstood deta
 In a domain driven application most of the value is not in the technological 
 knowledge of the developers, it's in their understanding of the matter.
 
-That's why I'm building Epic: to whipe out the impact of technology on the
+That's why I'm building Epic: to wipe out the impact of technology on the
 domain knowledge.
 
 C# is just a language (with pros and cons) that is formal enough to cleanly 
-fix such knowledge in code (and that's is diffused enough to "cheaply" find 
+fix such knowledge in code (and that is diffused enough to "cheaply" find 
 smart developers that can think in it).
 
 Thus, when Epic will be completed, our models will be a runnable description 
