@@ -42,7 +42,7 @@ That's where a domain model can help.
 
 We are developers, focused on scalability issues, nasty networking problems and 
 the so. We are so good with this complex things that we loose the simple reason 
-why we do them. At the end of the day, it's just a matter of making live easies 
+why we do them. At the end of the day, it's just a matter of making life easier 
 to someone. 
 According to who is the beneficiary, our work helps the goods or the evils. 
 But if it helps no one, we can't eke out a living.
@@ -54,13 +54,14 @@ Enter the domain expert
 -----------------------
 You have to help your customer. Sometimes he knows what he need.
 
-Looking for a faster database? Try PostgreSQL. Not enough? Denormalize it!
-Looking for a WSDL service? What's simpler?
+Looking for a faster database? Try PostgreSQL. Not enough? Denormalize it!  
+Looking for a WSDL service? What's simpler?  
 Looking for a bitch? Mmmm... where I can find a bitch?
 
 The point is that assuming that our customer doesn't know what he need is a bit 
 arrogant. If he has a problem that he doesn't know how to solve, he will 
-probably ask to someone else. The experts in the matter of his problem.   
+probably ask to someone else. He will ask to the experts in the matter of his 
+problem.   
 We are just **programming** whores (with a dignity? I don't know...). 
 
 In some occasion he need a software tool for an operative process of his company.
