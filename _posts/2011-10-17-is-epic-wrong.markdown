@@ -18,7 +18,8 @@ The point is relevant to me because Epic's architecture is based on the
 postulate that it is always possible to keep the business
 rules completely clean from the technological environment that run them.
 
-<a name="arc-fn-back"></a>The first (most important) reason is that, being
+<a name="arc-fn-back"></a>
+The first (most important) reason is that, being
 an [architect][arc-fn], I look at things from the customer's perspective.
 He doesn't want to know how you build things, as far as they solve his
 own problems.
