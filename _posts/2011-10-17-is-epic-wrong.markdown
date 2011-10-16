@@ -81,8 +81,9 @@ Look at the code: it has properties (with getters), it has fields, it has
 Now, let's bet
 --------------
 If I can prove you, by describing the components' interactions of an
-application that use such model in an CQRS or ES fashion, you'll work for
-Epic for one week, full time, for free (5 days, 7 hours a day, remotely).
+application that it is possible to use such model in an CQRS or ES fashion
+you'll work for Epic for one week, full time, for free (5 days, 7 hours a day, 
+remotely).
 
 If you'll prove me that my vision is wrong, I'll do the same for you.
 
