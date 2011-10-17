@@ -104,7 +104,7 @@ But that's life! I've done other errors in the past, and I've never fled them.
 
 <div class="footnotes" style="display:block; font-size:small;
 padding-top:20px;">
-<p>[<a name="detail-fn" href="#detail-fn-back">^</a>] I'm used to work
+<p>[1 <a name="detail-fn" href="#detail-fn-back">^</a>] I'm used to work
 with large projects, that fill up months of different teams.
 In such context, as an architect, I'm used to define "detail"
 something that requires a predictable amount of time and
@@ -113,15 +113,15 @@ Indeed through a correct separation of concerns, we can parallelize activities
 that have no dependencies (or depend on <u>already</u> shared contracts).
 The only changes that we can't control are those in the customer's mind.</p>
 
-<p>[<a name="arc-fn" href="#arc-fn-back">^</a>] If
+<p>[2 <a name="arc-fn" href="#arc-fn-back">^</a>] If
 <a href="/2011/06/29/software-architecture.html">architecture</a> is
 the structure that allows an artifact to satisfy the <u>paid</u> requirements,
 an architect is someone able to get a clean vision of the artifact far before
 it's actually built. This way he can drive the development.</p>
 </div>
 
-[detail-fn]: #detail-fn "What's an implementation detail?"
-[arc-fn]: #arc-fn "What's an Architect?"
+[detail-fn]: #detail-fn "What is an implementation detail?"
+[arc-fn]: #arc-fn "Who is an Architect?"
 [architecture]: http://epic.tesio.it/2011/06/29/software-architecture.html
 [cargo]: https://github.com/Shamar/Epic.NET/blob/devel/Challenges/Challenge00.DDDSample/Challenge00.DDDSample.Default/Cargo/Cargo.cs
 [location]: https://github.com/Shamar/Epic.NET/blob/devel/Challenges/Challenge00.DDDSample/Challenge00.DDDSample.Default/Location/Location.cs

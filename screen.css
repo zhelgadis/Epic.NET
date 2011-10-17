@@ -98,3 +98,4 @@ ul.posts {
 .minibutton:hover{color:#fff;text-decoration:none;text-shadow:-1px -1px 0 rgba(0,0,0,0.3);border-color:#518cc6;border-bottom-color:#2a65a0;background:#599bdc;filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#599bdc',endColorstr='#3072b3');background:-webkit-gradient(linear,left top,left bottom,from(#599bdc),to(#3072b3));background:-moz-linear-gradient(top,#599bdc,#3072b3);}
 .minibutton.mousedown{border-color:#2a65a0;border-bottom-color:#518cc6;background:#3072b3;filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#3072b3',endColorstr='#599bdc');background:-webkit-gradient(linear,left top,left bottom,from(#3072b3),to(#599bdc));background:-moz-linear-gradient(top,#3072b3,#599bdc);}
 
+div.footnotes { display:block; font-size:small; padding-top:20px; }
