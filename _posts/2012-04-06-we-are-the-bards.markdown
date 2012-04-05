@@ -22,15 +22,14 @@ choice about the organization name.
 
 A small joke has been born (who asked for a t-shirt?):
 
-<blockquote style="margin-left:40px">
-We are the [bards][1],  
-we know the Metric,  
-we wrote the Epic  
-of [architards][2].
+<blockquote style="margin-left:40px; font-family: serif; letter-spacing: 10px;">
+We are the <a href="https://github.com/bards" title="Epic bards">bards</a>,  <br/>
+we know the Metric,  <br/>
+we wrote the Epic  <br/>
+of <a href="http://en.wikipedia.org/wiki/Software_architect#Ivory_towers" title="Do you know architards?">architards</a>.
 </blockquote>
 
 Ok, now you have a good reason to steer clear of Epic: we are really, really 
 nerd! :-D
 
- [1]: https://github.com/bards "Epic bards"
- [2]: http://en.wikipedia.org/wiki/Software_architect#Ivory_towers
+
