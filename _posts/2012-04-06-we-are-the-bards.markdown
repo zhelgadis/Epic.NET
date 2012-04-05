@@ -22,10 +22,12 @@ choice about the organization name.
 
 A small joke has been born (who asked for a t-shirt?):
 
-We are the [bards][1],
-we know the Metric,
-we wrote the Epic
+<blockquote style="margin-left:40px">
+We are the [bards][1],  
+we know the Metric,  
+we wrote the Epic  
 of [architards][2].
+</blockquote>
 
 Ok, now you have a good reason to steer clear of Epic: we are really, really 
 nerd! :-D
