@@ -22,7 +22,7 @@ choice about the organization name.
 
 A small joke has been born (who asked for a t-shirt?):
 
-<blockquote style="margin-left:40px; font-family: serif; letter-spacing: 10px;">
+<blockquote style="margin-left:40px; font-family: serif;">
 We are the <a href="https://github.com/bards" title="Epic bards">bards</a>,  <br/>
 we know the Metric,  <br/>
 we wrote the Epic  <br/>
