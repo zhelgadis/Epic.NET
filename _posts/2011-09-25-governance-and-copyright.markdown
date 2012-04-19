@@ -88,8 +88,8 @@ On page 4, you can simply put "All code and documentation contributed to the
 Epic.NET project" or if you wish to be more specific please do so. For example 
 you could write something like:
 
-> All contributions sent to the source code repository maintained by Giacomo 
-> (at the time of this writing, github.com/Shamar/Epic.NET) by beneﬁciary under 
+> All contributions sent to the source code repository hosted at
+> [github.com/bards/Epic.NET][bards-repo] by beneﬁciary under 
 > the account name *YourUsernameHere* on or before the date of this document.
 
 (Note however, that such statement, will impose that you sigh a the FLA 
@@ -137,3 +137,4 @@ carefully. I always do.
 [fsfe-fla]: http://fsfe.org/projects/ftf/fla.en.html
 [bacula-fla]: http://www.bacula.org/en/?page=fla
 [credits]: http://epic.tesio.it/credits.html
+[bards-repo]: https://github.com/bards/Epic.NET
