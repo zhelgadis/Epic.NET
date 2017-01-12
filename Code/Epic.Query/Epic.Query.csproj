@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -8,37 +8,39 @@
     <ProjectGuid>{45E26C2D-47BD-42D7-8326-CE92777D79A4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AssemblyName>Epic.Query</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
+    <DebugSymbols>True</DebugSymbols>
     <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
+    <Optimize>False</Optimize>
     <OutputPath>..\..\build\bin\Debug</OutputPath>
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <ConsolePause>false</ConsolePause>
+    <ConsolePause>False</ConsolePause>
+    <GenerateDocumentation>True</GenerateDocumentation>
+    <DocumentationFile>..\..\build\bin\Debug\Epic.Query.XML</DocumentationFile>
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
-    <Optimize>true</Optimize>
+    <Optimize>True</Optimize>
     <OutputPath>..\..\build\bin\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <ConsolePause>false</ConsolePause>
+    <ConsolePause>False</ConsolePause>
+    <GenerateDocumentation>True</GenerateDocumentation>
+    <DocumentationFile>..\..\build\bin\Release\Epic.Query.XML</DocumentationFile>
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Core">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
+    <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="Relational\RelationType.cs" />
     <Compile Include="Relational\BaseRelation.cs" />
-    <Compile Include="Relational\Selection.cs" />
     <Compile Include="Relational\Constant.cs" />
     <Compile Include="Relational\RelationAttribute.cs" />
     <Compile Include="Relational\RelationFunction.cs" />
@@ -68,12 +70,17 @@
     <Compile Include="Relational\Operations\OuterJoin.cs" />
     <Compile Include="Relational\Operations\ThetaJoin.cs" />
     <Compile Include="Relational\RelationalExpression.cs" />
+    <Compile Include="Relational\AlgebraicExpression.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\Epic.Prelude\Epic.Prelude.csproj">
       <Project>{05F67FFC-37A0-4CDC-BC67-E32CBFBE22A7}</Project>
       <Name>Epic.Prelude</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Epic.Core\Epic.Core.csproj">
+      <Project>{A7F7A6D3-943F-480D-ADF2-7E846DD62D8C}</Project>
+      <Name>Epic.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

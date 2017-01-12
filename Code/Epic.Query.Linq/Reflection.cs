@@ -684,6 +684,12 @@ namespace Epic.Query.Linq
                     GetGenericMethodInfoFromExpressionBody(() => q.Where((i, p) => true)),
                     GetGenericMethodInfoFromExpressionBody(() => e.Where((i, p) => true))
                     );
+
+                AddTranslation(
+                    GetGenericMethodInfoFromExpressionBody(() => q.Zip(dummyEnumerable, (i, p) => true)),
+                    GetGenericMethodInfoFromExpressionBody(() => e.Zip(dummyEnumerable, (i, p) => true))
+                    );
+
             }
 
             /// <summary>
@@ -1446,13 +1452,18 @@ namespace Epic.Query.Linq
                     GetGenericMethodInfoFromExpressionBody(() => e.Where((i, p) => true)),
                     GetGenericMethodInfoFromExpressionBody(() => q.Where((i, p) => true))
                     );
+
+                AddTranslation(
+                    GetGenericMethodInfoFromExpressionBody(() => e.Zip(dummyEnumerable, (i, p) => true)),
+                    GetGenericMethodInfoFromExpressionBody(() => q.Zip(dummyEnumerable, (i, p) => true))
+                    );
             }
 
             /// <summary>
             /// Returns the semantic equivalent of <paramref name="enumerableMethod"/> in the <see cref="Queryable"/> class.
             /// </summary>
-            /// <param name="queryableMethod">Enumerable method to translate.</param>
-            /// <returns>The Queryable's equivalent of <paramref name="queryableMethod"/>.</returns>
+            /// <param name="enumerableMethod">Enumerable method to translate.</param>
+            /// <returns>The Queryable's equivalent of <paramref name="enumerableMethod"/>.</returns>
             /// <exception cref="ArgumentNullException">Thrown when <paramref name="enumerableMethod"/> is null.</exception>
             /// <exception cref="ArgumentException">Thrown when <paramref name="enumerableMethod"/> doesn't belong to <see cref="System.Linq.Enumerable"/>.</exception>
             /// <exception cref="KeyNotFoundException">The <paramref name="enumerableMethod"/> has no equivalent in <see cref="System.Linq.Queryable"/>.</exception>

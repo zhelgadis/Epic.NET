@@ -11,6 +11,10 @@
                 <arg line="${tests.to.run}" /> 
                 <arg value="-nologo" />
                 <arg value="-xml=${results-file}.xml" />
+                <environment>
+                    <variable name="ProfAPI_ProfilerCompatibilitySetting" value="EnableV2Profiler"/>
+                    <variable name="COMPLUS_ProfAPI_ProfilerCompatibilitySetting" value="EnableV2Profiler"/>
+                </environment>
             </exec>
         </if>
         
@@ -25,15 +29,21 @@
                 <arg line="${tests.to.run}" /> 
                 <arg value="-nologo" />
                 <arg value="-xml=${results-file}.xml" /> 
+                <environment>
+                    <variable name="ProfAPI_ProfilerCompatibilitySetting" value="EnableV2Profiler"/>
+                    <variable name="COMPLUS_ProfAPI_ProfilerCompatibilitySetting" value="EnableV2Profiler"/>
+                </environment>
             </exec>
         </if>
 
-        <!-- list the uncovered members -->
-        <style if="${file::exists(coverage-file + '.xml')}"
+        <!-- list the uncovered members
+        -->
+        <style if="${file::exists(coverage-file + '.xml')}" verbose="true"
             style="${path::combine(nant.include.dir, 'coverage-txt.xsl')}"
             in="${coverage-file}.xml"
             out="${coverage-file}.txt"/>
-        <!-- build a detailed report of uncovered members (if any) -->
+        <!-- build a detailed report of uncovered members (if any)
+        -->
         <style if="${file::exists(coverage-file + '.xml') and (file::get-length(coverage-file + '.txt') &gt; 0)}"
             style="${path::combine(nant.include.dir, 'coverage.xsl')}"
             in="${coverage-file}.xml"

@@ -41,7 +41,7 @@ namespace Epic.Query.Linq
     
     public sealed class DummyClassWithDifferentMembers
     {
-        public DummyClassWithDifferentMembers() { this.SampleEvent += delegate { }; }
+        public DummyClassWithDifferentMembers() { this.SampleEvent += delegate { }; SampleEvent(this, null);}
         public int IntProperty { get; set; }
         public string StringProperty { get; set; }
         public int IntField = 0;
@@ -69,7 +69,7 @@ namespace Epic.Query.Linq
         public void VerifyKnownMethods()
         {
             Assert.AreEqual(14, ReflectionQA.AllEnumerableMethodsThatHaveNoEquivalentInQueryable.Count());
-            Assert.AreEqual(160, ReflectionQA.AllEnumerableMethodsThatHaveEquivalentInQueryable.Count());
+            Assert.AreEqual(161, ReflectionQA.AllEnumerableMethodsThatHaveEquivalentInQueryable.Count());
             Assert.AreEqual(110, ReflectionQA.QueryableEnumerableEquivantMethods.Count());
         }
         

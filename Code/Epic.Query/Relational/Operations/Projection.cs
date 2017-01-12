@@ -24,8 +24,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-
 
 namespace Epic.Query.Relational.Operations
 {
@@ -46,7 +44,7 @@ namespace Epic.Query.Relational.Operations
         /// The <see cref="RelationalExpression"/> used as source for the projection.
         /// </param>
         /// <param name='attributes'>
-        /// The collection of <see cref="RelationAttributes"/> extracted
+        /// The collection of <see cref="RelationAttribute">relation attributes</see> extracted
         /// </param>
         public Projection(RelationalExpression relation, IEnumerable<RelationAttribute> attributes):
             base(RelationType.Projection)
@@ -60,9 +58,6 @@ namespace Epic.Query.Relational.Operations
         /// <summary>
         /// Gets the <see cref="RelationalExpression"/> used as source for the projection.
         /// </summary>
-        /// <value>
-        /// The table.
-        /// </value>
         public RelationalExpression Relation { get { return this._relation; } }
 
         /// <summary>
@@ -115,8 +110,9 @@ namespace Epic.Query.Relational.Operations
         /// Context.
         /// </param>
         /// <typeparam name='TResult'>
-        /// The 1st type parameter.
+        /// The type of the result of the visit.
         /// </typeparam>
+        /// <returns>Result of the visit.</returns>
         public override TResult Accept<TResult> (IVisitor<TResult> visitor, IVisitContext context)
         {
             return AcceptMe (this, visitor, context);
